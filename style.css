@@ -1,0 +1,79 @@
+*{	
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #57595b;
+}
+
+.big{
+	background-color: red;
+	border: 1px solid black;
+	padding-left: 0px !important;
+	padding-right: 0px !important;	
+	/*margin: 1px;*/
+}
+
+.minimain{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.big:hover,.minimain:hover{
+	cursor: pointer;
+}
+
+.mini{
+	background-color: green;
+	border: 1px solid black;	
+	/*margin: 1px;*/
+}
+
+#topVideos{
+	margin-top: 57px;
+	margin-bottom: 25px;
+}
+
+#logo{
+	height: 27px;
+}
+
+.environmentVideo,.peopleVideo,.technoVideo{
+	height: 220px;
+	border: 1px solid black;
+}
+
+#technovid,#environmentvid,#peoplevid{
+	margin-top: 25px;
+}
+
+.environmentVideo:hover,.peopleVideo:hover,.technoVideo:hover{
+	cursor: pointer;
+}
+
+.categoryHeading{
+	font-family: fantasy;
+	color: #fff;
+	text-shadow: 3px 1px 5px #000000;
+}
+
+#footer{
+	height: 100px;
+	background-color: #2d2e2f;
+	margin-top: 20px;
+}
+
+b{
+	color: #f0f0f0;
+	opacity: 0.6;
+	padding: 10px;
+}
+
+@media screen and (max-width:767px){	
+
+	.environmentVideo,.peopleVideo,.technoVideo{
+		height: 100px;
+		border: 1px solid black;
+	}
+
+}
