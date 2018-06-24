@@ -8,7 +8,7 @@ body{
 
 .big{
 	background-color: red;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	padding-left: 0px !important;
 	padding-right: 0px !important;	
 	/*margin: 1px;*/
@@ -25,8 +25,7 @@ body{
 
 .mini{
 	background-color: green;
-	border: 1px solid black;	
-	/*margin: 1px;*/
+	/*border: 1px solid black;	*/
 }
 
 #topVideos{
@@ -40,7 +39,7 @@ body{
 
 .environmentVideo,.peopleVideo,.technoVideo{
 	height: 220px;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 #technovid,#environmentvid,#peoplevid{
@@ -69,11 +68,23 @@ b{
 	padding: 10px;
 }
 
+.thumbnail{
+	width: 180px;
+	height: 180px;
+}
+
+#modalBox{
+	width: 520;
+	height: 520px;
+	border:none;
+	overflow:hidden;
+}
+
 @media screen and (max-width:767px){	
 
 	.environmentVideo,.peopleVideo,.technoVideo{
 		height: 100px;
-		border: 1px solid black;
+		/*border: 1px solid black;*/
 	}
 
 }

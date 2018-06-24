@@ -40,31 +40,51 @@
 
 <div class="container-fluid" id="topVideos">
 	<div class="row">
-		<div class="col-xl-8 col-lg-8 col-md-8 big">
+		<div class="col-xl-8 col-lg-8 col-md-8 big" data-toggle="modal" data-target="#myModal" id="video1">
 			Big
 		</div>
 		<div class="col-xl-4 col-lg-4 col-md-4 minimain">
-			<div class="col-xl-12 col-lg-12 col-md-12 mini">
+			<div class="col-xl-12 col-lg-12 col-md-12 mini" data-toggle="modal" data-target="#myModal" id="video2">
 				Mini 1
 			</div>
-			<div class="col-xl-12 col-lg-12 col-md-12 mini">
+			<div class="col-xl-12 col-lg-12 col-md-12 mini" data-toggle="modal" data-target="#myModal" id="video3">
 				Mini 2
 			</div>			
 		</div>
 	</div>
 </div>
 
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+	  <div class="modal-content">
+	  
+	    <!-- Modal Header -->
+	    <div class="modal-header">
+	      <h4 class="modal-title"></h4>
+	      <button type="button" class="close" id="closeModal" data-dismiss="modal">&times;</button>
+	    </div>
+	    
+	    <!-- Modal body -->
+	    <div class="modal-body justify-content-center">
+			<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartl%2Fvideos%2F407371013109977%2F&show_text=0&width=520" id="modalBox" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+	    </div>
+	    
+	  </div>
+	</div>
+</div>
+
 <div class="container-fluid" id="technovid">
 	<h3 class="categoryHeading">Techno</h3>
 	<div class="row">
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 technoVideo">
-			a
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 technoVideo">
-			b
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 technoVideo">
-			c
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
 	</div>
 </div>
@@ -72,14 +92,14 @@
 <div class="container-fluid" id="peoplevid">
 	<h3 class="categoryHeading">People</h3>
 	<div class="row">
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 peopleVideo">
-			a
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center peopleVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 peopleVideo">
-			b
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center peopleVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 peopleVideo">
-			c
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center peopleVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
 	</div>
 </div>
@@ -87,14 +107,14 @@
 <div class="container-fluid" id="environmentvid">
 	<h3 class="categoryHeading">Environment</h3>
 	<div class="row">
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 environmentVideo">
-			a
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center environmentVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 environmentVideo">
-			b
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center environmentVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
-		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 environmentVideo">
-			c
+		<div class="col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center environmentVideo">
+			<img src="./assets/square.png" class="thumbnail">
 		</div>
 	</div>
 </div>
@@ -107,5 +127,8 @@
 
 
 <script type="text/javascript" src='script.js'></script>
+<script type="text/javascript" src='topvideos.js'></script>
+<script type="text/javascript" src='videocategory.js'></script>
+
 </body>
 </html>
