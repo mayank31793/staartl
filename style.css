@@ -80,6 +80,10 @@ b{
 	overflow:hidden;
 }
 
+#rightArrow,#leftArrow{
+	display: none;
+}
+
 @media screen and (max-width:767px){	
 
 	.environmentVideo,.peopleVideo,.technoVideo{
