@@ -8,10 +8,11 @@ xhttp.onreadystatechange = function() {
 
   for(var i=0;i<data[0].techno.length;i++){
     var item = document.createElement('div');
-    item.setAttribute('class','col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo');
+    // item.setAttribute('class','col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo');
+    item.setAttribute('class','technoVideo');
 
     var itemImage = document.createElement('img');
-    itemImage.setAttribute('src','./assets/square.png');
+    itemImage.setAttribute('src',data[0].techno[i].thumbnail);
     itemImage.setAttribute('class','thumbnail');
     itemImage.setAttribute('id',i);
     itemImage.setAttribute('href','#demo');
@@ -21,6 +22,7 @@ xhttp.onreadystatechange = function() {
       console.log(this);
       var selected = this.getAttribute('id');
       document.getElementById('collapsableDivTechno').setAttribute('src',data[0].techno[selected].link);
+      document.getElementById('demo').setAttribute('class','in');
     });
 
     item.appendChild(itemImage);
@@ -32,7 +34,7 @@ xhttp.onreadystatechange = function() {
     item.setAttribute('class','col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo');
 
     var itemImage = document.createElement('img');
-    itemImage.setAttribute('src','./assets/square.png');
+    itemImage.setAttribute('src',data[0].people[i].thumbnail);
     itemImage.setAttribute('class','thumbnail');
 
     item.appendChild(itemImage);
@@ -44,7 +46,7 @@ xhttp.onreadystatechange = function() {
     item.setAttribute('class','col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo');
 
     var itemImage = document.createElement('img');
-    itemImage.setAttribute('src','./assets/square.png');
+    itemImage.setAttribute('src',data[0].environment[i].thumbnail);
     itemImage.setAttribute('class','thumbnail');
 
     item.appendChild(itemImage);
