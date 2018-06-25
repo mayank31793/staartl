@@ -84,6 +84,11 @@ b{
 	display: none;
 }
 
+#collapsableDivTechno{
+	height: 500px;
+	width: 500px;
+}
+
 @media screen and (max-width:767px){	
 
 	.environmentVideo,.peopleVideo,.technoVideo{

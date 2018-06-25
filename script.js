@@ -9,13 +9,19 @@ xhttp.onreadystatechange = function() {
   for(var i=0;i<data[0].techno.length;i++){
     var item = document.createElement('div');
     item.setAttribute('class','col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo');
-    // item.style.position = 'absolute';
-    // item.style.display = 'inline-block';
-    // item.style.float = 'left';
 
     var itemImage = document.createElement('img');
     itemImage.setAttribute('src','./assets/square.png');
     itemImage.setAttribute('class','thumbnail');
+    itemImage.setAttribute('id',i);
+    itemImage.setAttribute('href','#demo');
+    itemImage.setAttribute('data-toggle','collapse');
+    // document.getElementById('collapsableDivTechno').setAttribute('src',data[0].techno[i].link);
+    itemImage.addEventListener('click',function(){
+      console.log(this);
+      var selected = this.getAttribute('id');
+      document.getElementById('collapsableDivTechno').setAttribute('src',data[0].techno[selected].link);
+    });
 
     item.appendChild(itemImage);
     technoRow.appendChild(item);
@@ -91,24 +97,13 @@ if(window.innerWidth < 768){
 	miniVideo2.style.height = '130px';
 }
 
-document.getElementById('technovid').addEventListener('mouseover',function(){
-  this.innerHTML += `
-    <div id="rightArrow">
-      <svg height="80" width="30">
-        <polygon points="0,0 0,80 30,40" style="fill:#181819;stroke:purple;stroke-width:0" />
-        Sorry, your browser does not support inline SVG.
-      </svg>
-    </div>
-  `;
-  document.getElementById('rightArrow').style.position = 'relative';
-  document.getElementById('rightArrow').style.top = '0px';
-  document.getElementById('rightArrow').style.right = '0px';
-  document.getElementById('rightArrow').style.display = 'inline';
-});
+// document.getElementById('technovid').addEventListener('mouseenter',function(){
+//   document.getElementById('rightArrow').style.display = 'inline';
+// });
 
-document.getElementById('technovid').addEventListener('mouseout',function(){
-  document.getElementById('rightArrow').style.display = 'none';
-});
+// document.getElementById('technovid').addEventListener('mouseleave',function(){
+//   document.getElementById('rightArrow').style.display = 'none';
+// });
 
 var technoRow = document.getElementById('technoRow');
 var peopleRow = document.getElementById('peopleRow');
