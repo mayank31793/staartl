@@ -89,6 +89,61 @@ b{
 	width: 500px;
 }
 
+#modalVideo{
+    width:100%;
+    position:absolute;	
+}
+
+#languageBox{
+	width: 100px;
+	height: 34px;
+	padding-top: 3px;
+	box-shadow: 0 0 10px #000000;
+	text-shadow: 1px 1px #000000;
+	background-color: red;
+	border-radius: 15px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	color:white;
+}
+
+#languageBox:hover{
+	cursor: pointer;
+}
+
+#languagesAvailable{
+	background-color: #E8D9E1;
+	display: none;
+	position: fixed;
+	bottom: 60px;
+	right: 10px;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #000000;
+}
+
+#closeLanguageBox{
+	z-index: 2;	
+	position: absolute;
+    right: -7px;
+	font-size: 15px;
+	color: #ffffff;
+    top: -10px;
+    background-color: #000000;
+    padding: 0px 5px;
+    border-radius: 27px;
+    border: 2px solid white;    	
+}
+
+#closeLanguageBox:hover{
+	cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
 @media screen and (max-width:767px){	
 
 	.environmentVideo,.peopleVideo,.technoVideo{

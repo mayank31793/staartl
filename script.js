@@ -8,8 +8,8 @@ xhttp.onreadystatechange = function() {
 
   for(var i=0;i<data[0].techno.length;i++){
     var item = document.createElement('div');
-    // item.setAttribute('class','col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo');
-    item.setAttribute('class','technoVideo');
+    item.setAttribute('class','col=xl-4 col-lg-4 col-md-4 col-sm-4 col-4 d-flex justify-content-center technoVideo');
+    // item.setAttribute('class','technoVideo');
 
     var itemImage = document.createElement('img');
     itemImage.setAttribute('src',data[0].techno[i].thumbnail);
@@ -111,3 +111,22 @@ var technoRow = document.getElementById('technoRow');
 var peopleRow = document.getElementById('peopleRow');
 var environmentRow = document.getElementById('environmentRow');
 
+// document.getElementById('languagesAvailable').style.display = 'none';
+
+document.getElementById('languageBox').addEventListener('click',function(){
+  document.getElementById('languagesAvailable').style.display = 'inline-block';
+});
+
+closeLanguageBox
+
+document.getElementById('closeLanguageBox').addEventListener('click',function(){
+  document.getElementById('languagesAvailable').style.display = 'none';
+});
+
+document.getElementById('english').addEventListener('click',function(){
+  document.getElementById('language').innerHTML = 'English';  
+});
+
+document.getElementById('hindi').addEventListener('click',function(){
+  document.getElementById('language').innerHTML = 'हिन्दी';  
+});
