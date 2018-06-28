@@ -32,7 +32,7 @@ xhttp.onreadystatechange = function() {
       imgCarousel.setAttribute('src',data[0].techno[i].thumbnail);
       imgCarousel.setAttribute('id',i);
       imgCarousel.style.width = '32vw';
-      imgCarousel.style.height = '180px'; 
+      imgCarousel.style.height = '220px'; 
 
       divCarousel.appendChild(imgCarousel);
       technoCarouselDiv.appendChild(divCarousel);
@@ -45,7 +45,7 @@ xhttp.onreadystatechange = function() {
       imgCarousel.setAttribute('src',data[0].techno[i].thumbnail);
       imgCarousel.setAttribute('id',i);
       imgCarousel.style.width = '32vw';
-      imgCarousel.style.height = '180px';
+      imgCarousel.style.height = '220px';
 
       divCarousel.appendChild(imgCarousel);
       console.log('inside techno not multiple 3',data[0].techno[i].thumbnail);
@@ -78,7 +78,7 @@ xhttp.onreadystatechange = function() {
       imgCarousel.setAttribute('src',data[0].people[i].thumbnail);
       imgCarousel.setAttribute('id',i);
       imgCarousel.style.width = '32vw';
-      imgCarousel.style.height = '180px';      
+      imgCarousel.style.height = '220px';      
 
       divCarousel.appendChild(imgCarousel);
       peopleCarouselDiv.appendChild(divCarousel);
@@ -91,7 +91,7 @@ xhttp.onreadystatechange = function() {
       imgCarousel.setAttribute('src',data[0].people[i].thumbnail);
       imgCarousel.setAttribute('id',i);
       imgCarousel.style.width = '32vw';
-      imgCarousel.style.height = '180px';
+      imgCarousel.style.height = '220px';
 
       divCarousel.appendChild(imgCarousel);
       console.log('inside techno not multiple 3',data[0].people[i].thumbnail);
@@ -124,7 +124,7 @@ xhttp.onreadystatechange = function() {
       imgCarousel.setAttribute('src',data[0].environment[i].thumbnail);
       imgCarousel.setAttribute('id',i);
       imgCarousel.style.width = '32%';
-      imgCarousel.style.height = '180px';
+      imgCarousel.style.height = '220px';
 
       divCarousel.appendChild(imgCarousel);
       environmentCarouselDiv.appendChild(divCarousel);
@@ -137,7 +137,7 @@ xhttp.onreadystatechange = function() {
       imgCarousel.setAttribute('src',data[0].environment[i].thumbnail);
       imgCarousel.setAttribute('id',i);
       imgCarousel.style.width = '32vw';
-      imgCarousel.style.height = '180px';
+      imgCarousel.style.height = '220px';
 
       divCarousel.appendChild(imgCarousel);
       console.log('inside techno not multiple 3',data[0].environment[i].thumbnail);
