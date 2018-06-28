@@ -147,8 +147,7 @@ ul {
 @media screen and (max-width:767px){	
 
 	.environmentVideo,.peopleVideo,.technoVideo{
-		height: 100px;
-		/*border: 1px solid black;*/
+		height: 70px;
 	}
 
 }
