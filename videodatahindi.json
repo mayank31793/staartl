@@ -1,0 +1,75 @@
+[
+	{
+		"techno": [{
+				"videotitle": "बंधन बैंक",
+				"thumbnail": "./assets/bandhan.jpg",
+				"description": "2 लाख रूपए के मामूली निवेश से, बंधन बैंक बैंक बन चूका है 10,000 करोड़ का आर्गेनाईजेशन! देखिये इसकी शुरुवाद कैसे हुई।",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1702685833110834%2F&show_text=0&width=476"				
+			},
+			{
+				"videotitle": "मंगलयान",
+				"thumbnail": "./assets/mars.jpg",
+				"description": "हालांकि मंगलयान का प्रारंभिक मिशन काल 6 महीने था, लेकिन अब यह 3.5 से अधिक वर्षों से काम कर रहा है। इसकी अविश्वसनीय यात्रा की कहानी देखें।",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1700004336712317%2F&show_text=0&width=476"
+			},
+			{
+				"videotitle": "जयपुर फुट",
+				"thumbnail": "./assets/jaipur.jpg",
+				"description": "'जयपुर फुट' दशकों से विकलांगों को सशक्त बना रहा है। इस भारतीय आविष्कार और संगठन के बारे में और जानें!",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1734102179969199%2F&show_text=0&width=476"
+			},
+			{
+				"videotitle": "निपा वायरस",
+				"thumbnail": "./assets/nipah.jpg",
+				"description": "मई 2018 में, एक रहस्यमय प्रकोप से केरल में कई लोगों की मौत हो गई। इस वीडियो में जानिए निपा वायरस के बारे में कुछ महत्वपूर्ण तथ्य।",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1728304420548975%2F&show_text=0&width=476"
+			}			
+		],
+
+		"people": [{
+				"videotitle": "सीरिया से चार पंजों पर",
+				"thumbnail": "./assets/syria.jpg",
+				"description": "अलेप्पो, सीरिया: एक चिड़ियाघर जिसमें 300 जानवर थे, उनमे केवल 13 ही बचे थे। 'फोर पॉस', एक ऑस्ट्रिया स्थित पशु कल्याण ग्रुप, ने उनको बचाया। देखिये कैसे!",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1716263195086431%2F&show_text=0&width=476"
+			},
+			{
+				"videotitle": "जयपुर फुट",
+				"thumbnail": "./assets/jaipur.jpg",
+				"description": "'जयपुर फुट' दशकों से विकलांगों को सशक्त बना रहा है। इस भारतीय आविष्कार और संगठन के बारे में और जानें!",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1734102179969199%2F&show_text=0&width=476"			
+			},
+			{
+				"videotitle": "अफ़ग़ान लड़की",
+				"thumbnail": "./assets/afghan.jpg",
+				"description": "ये है वो अविश्वसनीय तस्वीर, 'द अफ़ग़ान गर्ल'। जानिए असली अफ़ग़ान गर्ल के कहानी।",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1746432325402851%2F&show_text=0&width=476"
+			},
+			{
+				"videotitle": "राजा हरिश्चंद्र",
+				"thumbnail": "./assets/dadasaheb.jpg",
+				"description": "भारतीय फिल्म उद्योग से पहले, दादासाहेब फाल्के थे। देखें उन्होंने भारत की पहली फिल्म कैसे बनाई।",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1760886007290816%2F&show_text=0&width=476"
+			}
+		],
+
+		"environment": [{
+				"videotitle": "सीरिया से चार पंजों पर",
+				"thumbnail": "./assets/syria.jpg",
+				"description": "अलेप्पो, सीरिया: एक चिड़ियाघर जिसमें 300 जानवर थे, उनमे केवल 13 ही बचे थे। 'फोर पॉस', एक ऑस्ट्रिया स्थित पशु कल्याण ग्रुप, ने उनको बचाया। देखिये कैसे!",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1716263195086431%2F&show_text=0&width=476"			
+			},
+			{
+				"videotitle": "निपा वायरस",
+				"thumbnail": "./assets/nipah.jpg",
+				"description": "मई 2018 में, एक रहस्यमय प्रकोप से केरल में कई लोगों की मौत हो गई। इस वीडियो में जानिए निपा वायरस के बारे में कुछ महत्वपूर्ण तथ्य।",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1728304420548975%2F&show_text=0&width=476"
+			},
+			{
+				"videotitle": "प्लास्टिक द्वीप",
+				"thumbnail": "./assets/plastic.jpg",
+				"description": "क्या आप जानते थे कि प्रशांत महासागर में प्लास्टिक के मलबे का एक फ़्लोटिंग द्वीप है? और यह फ्रांस के आकार के 3 गुना है!",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1753412978038119%2F&show_text=0&width=476"				
+			}
+		]
+	}
+]
