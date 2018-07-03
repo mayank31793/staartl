@@ -80,6 +80,10 @@ b{
 	overflow:hidden;
 }
 
+#modalBody{
+
+}
+
 #rightArrow,#leftArrow{
 	display: none;
 }
@@ -90,8 +94,7 @@ b{
 }
 
 #modalVideo{
-    width:100%;
-    position:absolute;	
+    	
 }
 
 #languageBox{
@@ -148,6 +151,10 @@ ul {
 
 	.environmentVideo,.peopleVideo,.technoVideo{
 		height: 70px;
+	}
+
+	#modalBox{
+		height: 100vw;
 	}
 
 }

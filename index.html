@@ -58,7 +58,7 @@
 
 <!-- The Modal -->
 <div class="modal fade" id="myModal">
-	<div class="modal-dialog">
+	<div class="modal-dialog modal-lg">
 	  <div class="modal-content">
 	  
 	    <!-- Modal Header -->
@@ -69,29 +69,18 @@
 	    
 	    <!-- Modal body -->
 	    <div class="modal-body justify-content-center" id="modalVideo">
-			<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartl%2Fvideos%2F407371013109977%2F&show_text=0&width=520" id="modalBox" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-			<div id="modalBody"></div>
+	    	<div class='row'>
+		    	<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+					<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartl%2Fvideos%2F407371013109977%2F&show_text=0&width=520" style="width:100%" id="modalBox"></iframe>	    		
+		    	</div>
+		    	<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+					<div id="modalBody"></div>
+				</div>
+			</div>				
 	    </div>
 	    
 	  </div>
 	</div>
-</div>
-
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <div class="modal-body">
-          Modal body..
-        </div>
-        
-      </div>
-    </div>
 </div>
 
 <h3 class="categoryHeading">Techno</h3>
@@ -111,6 +100,13 @@
   </a>
 </div>
 
+<div id="clickedTechnoVid">
+	<span id="clickedTechnoIframeclose">&times;</span>
+	<iframe src="" id="clickedTechnoIframe"></iframe>
+	<h5 id="clickedTechnoIframeHeading"></h5>
+	<i id="clickedTechnoIframeDescription"></i>
+</div>
+
 <h3 class="categoryHeading">People</h3>
 <div id="demo2" class="carousel slide" data-ride="carousel">
   
@@ -128,6 +124,13 @@
   </a>
 </div>
 
+<div id="clickedPeopleVid">
+	<span id="clickedPeopleIframeclose">&times;</span>
+	<iframe src="" id="clickedPeopleIframe"></iframe>
+	<h5 id="clickedPeopleIframeHeading"></h5>
+	<i id="clickedPeopleIframeDescription"></i>
+</div>
+
 <h3 class="categoryHeading">Environment</h3>
 <div id="demo3" class="carousel slide" data-ride="carousel">
   
@@ -143,6 +146,13 @@
   <a class="carousel-control-next" href="#demo3" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
+</div>
+
+<div id="clickedEnvironmentVid">
+	<span id="clickedEnvironmentIframeclose">&times;</span>
+	<iframe src="" id="clickedEnvironmentIframe"></iframe>
+	<h5 id="clickedEnvironmentIframeHeading"></h5>
+	<i id="clickedEnvironmentIframeDescription"></i>
 </div>
 
 <div class="container-fluid" id="footer">
