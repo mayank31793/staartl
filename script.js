@@ -52,6 +52,8 @@ xhttp.onreadystatechange = function() {
       var strget = e.target.id;
       var strpos = strget.charAt(6);
       var numstrpos = parseInt(strpos);
+      document.getElementById('clickedPeopleVid').style.display = 'none';
+      document.getElementById('clickedEnvironmentVid').style.display = 'none';      
       document.getElementById('clickedTechnoVid').style.display = 'block';
       document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
       document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
@@ -64,7 +66,9 @@ xhttp.onreadystatechange = function() {
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('click',function(e){
       var strget = e.target.id;
       var strpos = strget.charAt(6);
-      var numstrpos = parseInt(strpos);      
+      var numstrpos = parseInt(strpos);   
+      document.getElementById('clickedTechnoVid').style.display = 'none';
+      document.getElementById('clickedEnvironmentVid').style.display = 'none';         
       document.getElementById('clickedPeopleVid').style.display = 'block';
       document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);
       document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
@@ -78,6 +82,8 @@ xhttp.onreadystatechange = function() {
       var strget = e.target.id;
       var strpos = strget.charAt(11);
       var numstrpos = parseInt(strpos);      
+      document.getElementById('clickedTechnoVid').style.display = 'none';
+      document.getElementById('clickedPeopleVid').style.display = 'none';
       document.getElementById('clickedEnvironmentVid').style.display = 'block';
       document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
       document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
