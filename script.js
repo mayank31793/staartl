@@ -53,22 +53,22 @@ xhttp.onreadystatechange = function() {
       var strpos = strget.charAt(6);
       var numstrpos = parseInt(strpos);
 
-      console.log(this.offsetWidth);
-      console.log('offsetleft ',this.offsetLeft);
-
-      var arrowpos = this.offsetLeft + (this.offsetWidth)/2;
-      console.log('arrowpos ',arrowpos);
+      var arrowpositiontechno = this.offsetLeft + (this.offsetWidth)/2;
 
       //display only clicked category
       document.getElementById('clickedPeopleVid').style.display = 'none';
       document.getElementById('clickedEnvironmentVid').style.display = 'none';      
       document.getElementById('clickedTechnoVid').style.display = 'block';
 
+      //display only clicked arrow of category
+      document.getElementById('clickedfieldarrowPeople').style.display = 'none';
+      document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';      
+
       //arrow pointing which field is open in description
-      document.getElementById('clickedfieldarrow').style.display = 'block';
-      document.getElementById('clickedfieldarrow').style.position = 'relative';
-      document.getElementById('clickedfieldarrow').style.top = '-12px';
-      document.getElementById('clickedfieldarrow').style.left = arrowpos+'px';
+      document.getElementById('clickedfieldarrowTechno').style.display = 'block';
+      document.getElementById('clickedfieldarrowTechno').style.position = 'relative';
+      document.getElementById('clickedfieldarrowTechno').style.top = '-12px';
+      document.getElementById('clickedfieldarrowTechno').style.left = arrowpositiontechno+'px';
 
       //toggle div details
       document.getElementById('clickedTechnoVid').style.height = 'auto';
@@ -95,10 +95,29 @@ xhttp.onreadystatechange = function() {
       var strget = e.target.id;
       var strpos = strget.charAt(6);
       var numstrpos = parseInt(strpos);   
+
+      var arrowpositionpeople = this.offsetLeft + (this.offsetWidth)/2;
+
+      //display only clicked category
       document.getElementById('clickedTechnoVid').style.display = 'none';
       document.getElementById('clickedEnvironmentVid').style.display = 'none';         
       document.getElementById('clickedPeopleVid').style.display = 'block';
+
+      //display only clicked arrow of category
+      document.getElementById('clickedfieldarrowTechno').style.display = 'none';
+      document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';
+
+      //arrow pointing which field is open in description
+      document.getElementById('clickedfieldarrowPeople').style.display = 'block';
+      document.getElementById('clickedfieldarrowPeople').style.position = 'relative';
+      document.getElementById('clickedfieldarrowPeople').style.top = '-12px';
+      document.getElementById('clickedfieldarrowPeople').style.left = arrowpositionpeople+'px';      
+
+      //toggle div details
+      document.getElementById('clickedPeopleVid').style.height = 'auto';
       document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);
+      document.getElementById('clickedPeopleIframe').style.width = '100%';
+      document.getElementById('clickedPeopleIframe').style.height = '500px';      
       document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
       document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
     });
@@ -118,11 +137,28 @@ xhttp.onreadystatechange = function() {
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('click',function(e){
       var strget = e.target.id;
       var strpos = strget.charAt(11);
-      var numstrpos = parseInt(strpos);      
+      var numstrpos = parseInt(strpos); 
+
+      var arrowpositionenvironment = this.offsetLeft + (this.offsetWidth)/2;
+
+      //display only clicked category
       document.getElementById('clickedTechnoVid').style.display = 'none';
       document.getElementById('clickedPeopleVid').style.display = 'none';
       document.getElementById('clickedEnvironmentVid').style.display = 'block';
+
+      //display only clicked arrow of category
+      document.getElementById('clickedfieldarrowTechno').style.display = 'none';
+      document.getElementById('clickedfieldarrowPeople').style.display = 'none';
+
+      //arrow pointing which field is open in description
+      document.getElementById('clickedfieldarrowEnvironment').style.display = 'block';
+      document.getElementById('clickedfieldarrowEnvironment').style.position = 'relative';
+      document.getElementById('clickedfieldarrowEnvironment').style.top = '-12px';
+      document.getElementById('clickedfieldarrowEnvironment').style.left = arrowpositionenvironment+'px';       
+
       document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
+      document.getElementById('clickedEnvironmentIframe').style.width = '100%';
+      document.getElementById('clickedEnvironmentIframe').style.height = '500px';      
       document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
       document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
     });
@@ -154,7 +190,9 @@ document.getElementById('demo3').style.overflowY = 'hidden';
 document.getElementById('clickedTechnoVid').style.display = 'none';
 document.getElementById('clickedPeopleVid').style.display = 'none';
 document.getElementById('clickedEnvironmentVid').style.display = 'none';
-document.getElementById('clickedfieldarrow').style.display = 'none';
+document.getElementById('clickedfieldarrowTechno').style.display = 'none';
+document.getElementById('clickedfieldarrowPeople').style.display = 'none';
+document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';
 
 document.getElementById('video1').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src',data[0].techno[1].link);
@@ -225,13 +263,21 @@ document.getElementById('closeLanguageBox').addEventListener('click',function(){
 //   console.log('Hindi');
 // });
 
+function clodeIframe(arrow,opened,iframesrc){
+  document.getElementById(arrow).style.display = 'none';
+  document.getElementById(opened).style.display = 'none';
+  document.getElementById(iframesrc).setAttribute('src','');  
+}
+
 document.getElementById('clickedTechnoIframeclose').addEventListener('click',function(){
-  document.getElementById('clickedfieldarrow').style.display = 'none';
-  document.getElementById('clickedTechnoVid').style.display = 'none';
-  document.getElementById('clickedTechnoIframe').setAttribute('src','');
+  clodeIframe('clickedfieldarrow','clickedTechnoVid','clickedTechnoIframe');
+  // document.getElementById('clickedfieldarrow').style.display = 'none';
+  // document.getElementById('clickedTechnoVid').style.display = 'none';
+  // document.getElementById('clickedTechnoIframe').setAttribute('src','');
 });
 
 document.getElementById('clickedPeopleIframeclose').addEventListener('click',function(){
+  document.getElementById('clickedfieldarrow').style.display = 'none';
   document.getElementById('clickedPeopleVid').style.display = 'none';
   document.getElementById('clickedPeopleIframe').setAttribute('src','');
 });
