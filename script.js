@@ -143,28 +143,40 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET",'videodata.json', true);
 xhttp.send();
 
+//carousel height
+document.getElementById('demo').style.height = '250px';
+document.getElementById('demo').style.overflowY = 'hidden';
+document.getElementById('demo2').style.height = '250px';
+document.getElementById('demo2').style.overflowY = 'hidden';
+document.getElementById('demo3').style.height = '250px';
+document.getElementById('demo3').style.overflowY = 'hidden';
+
 document.getElementById('clickedTechnoVid').style.display = 'none';
 document.getElementById('clickedPeopleVid').style.display = 'none';
 document.getElementById('clickedEnvironmentVid').style.display = 'none';
 document.getElementById('clickedfieldarrow').style.display = 'none';
 
 document.getElementById('video1').addEventListener('click',function(){
-  document.getElementById('modalBox').setAttribute('src',data[0].techno[0].link);
-  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].techno[0].videotitle;
-  document.getElementById('modalBody').innerHTML = data[0].techno[0].description;
+  document.getElementById('modalBox').setAttribute('src',data[0].techno[1].link);
+  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].techno[1].videotitle;
+  document.getElementById('modalBody').innerHTML = data[0].techno[1].description;
 });
 
 document.getElementById('video2').addEventListener('click',function(){
-  document.getElementById('modalBox').setAttribute('src',data[0].techno[1].link);
-  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].techno[1].videotitle;
-  document.getElementById('modalBody').innerHTML = data[0].techno[1].description;  
+  document.getElementById('modalBox').setAttribute('src',data[0].people[2].link);
+  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].people[2].videotitle;
+  document.getElementById('modalBody').innerHTML = data[0].people[2].description;  
 });
 
 document.getElementById('video3').addEventListener('click',function(){
-  document.getElementById('modalBox').setAttribute('src',data[0].techno[2].link);
-  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].techno[2].videotitle;
-  document.getElementById('modalBody').innerHTML = data[0].techno[2].description;  
+  document.getElementById('modalBox').setAttribute('src',data[0].environment[0].link);
+  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].environment[0].videotitle;
+  document.getElementById('modalBody').innerHTML = data[0].environment[0].description;  
 });
+
+document.getElementById('video1').style.overflowY = 'hidden';
+document.getElementById('video2').style.overflowY = 'hidden';
+document.getElementById('video3').style.overflowY = 'hidden';
 
 document.getElementById('closeModal').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src','');
