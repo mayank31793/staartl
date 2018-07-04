@@ -147,6 +147,32 @@ ul {
     list-style-type: none;
 }
 
+#clickedPeopleVid{
+
+}
+
+#clickedTechnoIframeclose, #clickedPeopleIframeclose, #clickedEnvironmentIframeclose{
+	float: right;
+	color: white;
+    font-size: 25px;
+    margin: -7px -13px;	
+}
+
+#clickedTechnoIframeclose:hover, #clickedPeopleIframeclose:hover, #clickedEnvironmentIframeclose:hover{
+	cursor: pointer;	
+}
+
+.toggleDiv{
+	margin: -15px 10px 10px 10px;
+	padding: 10px;
+	background-color: black;
+
+}
+
+#clickedfieldarrow{
+	
+}
+
 @media screen and (max-width:767px){	
 
 	.environmentVideo,.peopleVideo,.technoVideo{

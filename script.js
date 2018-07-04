@@ -52,13 +52,41 @@ xhttp.onreadystatechange = function() {
       var strget = e.target.id;
       var strpos = strget.charAt(6);
       var numstrpos = parseInt(strpos);
+
+      console.log(this.offsetWidth);
+      console.log('offsetleft ',this.offsetLeft);
+
+      var arrowpos = this.offsetLeft + (this.offsetWidth)/2;
+      console.log('arrowpos ',arrowpos);
+
+      //display only clicked category
       document.getElementById('clickedPeopleVid').style.display = 'none';
       document.getElementById('clickedEnvironmentVid').style.display = 'none';      
       document.getElementById('clickedTechnoVid').style.display = 'block';
+
+      //arrow pointing which field is open in description
+      document.getElementById('clickedfieldarrow').style.display = 'block';
+      document.getElementById('clickedfieldarrow').style.position = 'relative';
+      document.getElementById('clickedfieldarrow').style.top = '-12px';
+      document.getElementById('clickedfieldarrow').style.left = arrowpos+'px';
+
+      //toggle div details
+      document.getElementById('clickedTechnoVid').style.height = 'auto';
       document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
+      document.getElementById('clickedTechnoIframe').style.width = '100%';
+      document.getElementById('clickedTechnoIframe').style.height = '500px';
       document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
       document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
-    });       
+    });
+    document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
+      this.style.cursor = 'pointer';
+      this.style.opacity = 0.7;
+    });
+
+    document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseleave',function(e){
+      this.style.opacity = 1;
+    });
+
   }  
 
   for(var j=0;j<data[0].people.length;j++){
@@ -73,7 +101,16 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);
       document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
       document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
-    });    
+    });
+    document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseenter',function(e){
+      this.style.cursor = 'pointer';
+      this.style.opacity = 0.7;
+    });
+
+    document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseleave',function(e){
+      this.style.opacity = 1;
+    });
+
   }
 
   for(var k=0;k<data[0].environment.length;k++){
@@ -88,7 +125,16 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
       document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
       document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
-    });    
+    });
+    document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
+      this.style.cursor = 'pointer';
+      this.style.opacity = 0.7;
+    });
+
+    document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseleave',function(e){
+      this.style.opacity = 1;
+    });
+
   }    
 
   }
@@ -100,6 +146,7 @@ xhttp.send();
 document.getElementById('clickedTechnoVid').style.display = 'none';
 document.getElementById('clickedPeopleVid').style.display = 'none';
 document.getElementById('clickedEnvironmentVid').style.display = 'none';
+document.getElementById('clickedfieldarrow').style.display = 'none';
 
 document.getElementById('video1').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src',data[0].techno[0].link);
@@ -167,6 +214,7 @@ document.getElementById('closeLanguageBox').addEventListener('click',function(){
 // });
 
 document.getElementById('clickedTechnoIframeclose').addEventListener('click',function(){
+  document.getElementById('clickedfieldarrow').style.display = 'none';
   document.getElementById('clickedTechnoVid').style.display = 'none';
   document.getElementById('clickedTechnoIframe').setAttribute('src','');
 });
