@@ -162,6 +162,10 @@ ul {
 	cursor: pointer;	
 }
 
+.horizontalLine{
+	border-top: 1px solid #ffffff;
+}
+
 .toggleDiv{
 	margin: -15px 10px 10px 10px;
 	padding: 10px;

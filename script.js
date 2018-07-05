@@ -294,27 +294,21 @@ document.getElementById('closeLanguageBox').addEventListener('click',function(){
 //   console.log('Hindi');
 // });
 
-function clodeIframe(arrow,opened,iframesrc){
+function closeIframe(arrow,opened,iframesrc){
   document.getElementById(arrow).style.display = 'none';
   document.getElementById(opened).style.display = 'none';
   document.getElementById(iframesrc).setAttribute('src','');  
 }
 
 document.getElementById('clickedTechnoIframeclose').addEventListener('click',function(){
-  clodeIframe('clickedfieldarrow','clickedTechnoVid','clickedTechnoIframe');
-  // document.getElementById('clickedfieldarrow').style.display = 'none';
-  // document.getElementById('clickedTechnoVid').style.display = 'none';
-  // document.getElementById('clickedTechnoIframe').setAttribute('src','');
+  closeIframe('clickedfieldarrowTechno','clickedTechnoVid','clickedTechnoIframe');
 });
 
 document.getElementById('clickedPeopleIframeclose').addEventListener('click',function(){
-  document.getElementById('clickedfieldarrow').style.display = 'none';
-  document.getElementById('clickedPeopleVid').style.display = 'none';
-  document.getElementById('clickedPeopleIframe').setAttribute('src','');
+  closeIframe('clickedfieldarrowPeople','clickedPeopleVid','clickedPeopleIframe');
 });
 
 document.getElementById('clickedEnvironmentIframeclose').addEventListener('click',function(){
-  document.getElementById('clickedEnvironmentVid').style.display = 'none';
-  document.getElementById('clickedEnvironmentIframe').setAttribute('src','');
+  closeIframe('clickedfieldarrowEnvironment','clickedEnvironmentVid','clickedEnvironmentIframe');
 });
 
