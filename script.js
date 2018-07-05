@@ -12,7 +12,7 @@ function categories(a,category,parentElement,field){
     imgCarousel = document.createElement('img');
     imgCarousel.setAttribute('src',category);
     imgCarousel.setAttribute('id',field+a);
-    imgCarousel.setAttribute('class','col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4');
+    imgCarousel.setAttribute('class','col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 CarouselField');
     imgCarousel.style.width = '';
     imgCarousel.style.height = ''; 
 
@@ -25,7 +25,7 @@ function categories(a,category,parentElement,field){
     imgCarousel = document.createElement('img');
     imgCarousel.setAttribute('src',category);
     imgCarousel.setAttribute('id',field+a);
-    imgCarousel.setAttribute('class','col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4');
+    imgCarousel.setAttribute('class','col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 CarouselField');
     imgCarousel.style.width = '';
     imgCarousel.style.height = '';
 
@@ -73,7 +73,7 @@ xhttp.onreadystatechange = function() {
       //toggle div details
       document.getElementById('clickedTechnoVid').style.height = 'auto';
       document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
-      document.getElementById('clickedTechnoIframe').style.width = '100%';
+      document.getElementById('clickedTechnoIframe').style.width = '500px';
       document.getElementById('clickedTechnoIframe').style.height = '500px';
       document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
       document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
@@ -116,7 +116,7 @@ xhttp.onreadystatechange = function() {
       //toggle div details
       document.getElementById('clickedPeopleVid').style.height = 'auto';
       document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);
-      document.getElementById('clickedPeopleIframe').style.width = '100%';
+      document.getElementById('clickedPeopleIframe').style.width = '500px';
       document.getElementById('clickedPeopleIframe').style.height = '500px';      
       document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
       document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
@@ -156,8 +156,10 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedfieldarrowEnvironment').style.top = '-12px';
       document.getElementById('clickedfieldarrowEnvironment').style.left = arrowpositionenvironment+'px';       
 
+      //toggle div details
       document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
-      document.getElementById('clickedEnvironmentIframe').style.width = '100%';
+      // document.getElementById('clickedEnvironmentIframe').style.transition = '0.8s';
+      document.getElementById('clickedEnvironmentIframe').style.width = '500px';
       document.getElementById('clickedEnvironmentIframe').style.height = '500px';      
       document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
       document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
@@ -206,37 +208,66 @@ document.getElementById('video2').addEventListener('click',function(){
   document.getElementById('modalBody').innerHTML = data[0].people[2].description;  
 });
 
-document.getElementById('video3').addEventListener('click',function(){
-  document.getElementById('modalBox').setAttribute('src',data[0].environment[0].link);
-  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].environment[0].videotitle;
-  document.getElementById('modalBody').innerHTML = data[0].environment[0].description;  
-});
+// document.getElementById('video3').addEventListener('click',function(){
+//   document.getElementById('modalBox').setAttribute('src',data[0].environment[0].link);
+//   document.getElementsByClassName('modal-title')[0].innerHTML = data[0].environment[0].videotitle;
+//   document.getElementById('modalBody').innerHTML = data[0].environment[0].description;  
+// });
+
+document.getElementById('video1').style.height = '90vh';
+document.getElementById('video1').style.backgroundImage = "url('./assets/english/mars.jpg')";
+document.getElementById('video1').style.backgroundRepeat = 'no-repeat';
+document.getElementById('video1').style.backgroundSize = '100% auto';
+
+document.getElementById('video2').style.height = '90vh';
+document.getElementById('video2').style.backgroundImage = "url('./assets/english/afghan.jpg')";
+document.getElementById('video2').style.backgroundRepeat = 'no-repeat';
+document.getElementById('video2').style.backgroundSize = '130% auto';
+document.getElementById('video2').style.backgroundPosition= 'center top';
 
 document.getElementById('video1').style.overflowY = 'hidden';
 document.getElementById('video2').style.overflowY = 'hidden';
-document.getElementById('video3').style.overflowY = 'hidden';
+// document.getElementById('video3').style.overflowY = 'hidden';
+
+document.getElementById('video1').style.border = '1px solid white';
+document.getElementById('video2').style.border = '1px solid white';
+// document.getElementById('video3').style.border = '1px solid white';
 
 document.getElementById('closeModal').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src','');
 });
 
 var topvideocontainer = document.getElementById('topVideos');
-var mainVideo = document.getElementsByClassName('big')[0];
-var miniVideo1 = document.getElementsByClassName('mini')[0];
-var miniVideo2 = document.getElementsByClassName('mini')[1];
+var main = document.getElementsByClassName('big')[0];
+var mini = document.getElementsByClassName('mini')[0];
 
-topvideocontainer.style.height = '400px';
+topvideocontainer.style.height = '90vh';
 
-mainVideo.style.height = topvideocontainer.offsetHeight+'px';
-
-miniVideo1.style.height = (topvideocontainer.offsetHeight)/2+'px';
-
-miniVideo2.style.height = (topvideocontainer.offsetHeight)/2+'px';
+main.style.height = '90vh';
+mini.style.height = '90vh';
 
 if(window.innerWidth < 768){
-	mainVideo.style.height = '130px';
-	miniVideo1.style.height = '130px';
-	miniVideo2.style.height = '130px';
+
+  main.style.height = '45vh';
+	mini.style.height = '45vh';
+
+  document.getElementById('demo').style.height = '100px';
+  document.getElementById('demo2').style.height = '100px';
+  document.getElementById('demo3').style.height = '100px';
+
+  document.getElementById('clickedTechnoIframe').style.width = '100vw';
+
+  var mobileIframeHeight = document.getElementById('clickedTechnoIframe').style.width;
+  console.log(mobileIframeHeight);
+
+  document.getElementById('clickedTechnoIframe').style.height = mobileIframeHeight+'vw';  
+
+  document.getElementById('clickedTechnoIframe').style.width = '100%';
+
+  var framewidth = document.getElementById('clickedTechnoIframe').offsetWidth;
+  document.getElementById('clickedTechnoIframe').style.height = framewidth+'px';
+  console.log('framewidth',framewidth);
+
 }
 
 var technoRow = document.getElementById('technoRow');
@@ -286,3 +317,4 @@ document.getElementById('clickedEnvironmentIframeclose').addEventListener('click
   document.getElementById('clickedEnvironmentVid').style.display = 'none';
   document.getElementById('clickedEnvironmentIframe').setAttribute('src','');
 });
+

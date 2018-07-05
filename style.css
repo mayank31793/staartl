@@ -14,12 +14,7 @@ body{
 	padding-right: 0px !important;
 }
 
-.minimain{
-	padding-left: 0px !important;
-	padding-right: 0px !important;
-}
-
-.big:hover,.minimain:hover{
+.big:hover,.mini:hover{
 	cursor: pointer;
 }
 
@@ -70,7 +65,7 @@ body{
 b{
 	color: #f0f0f0;
 	opacity: 0.6;
-	padding: 10px;
+	/*padding: 10px;*/
 }
 
 .thumbnail{
@@ -152,8 +147,8 @@ ul {
     list-style-type: none;
 }
 
-#clickedPeopleVid{
-
+#clickedTechnoVid,#clickedPeopleVid,#clickedEnvironmentVid{
+	color: #ffffff;
 }
 
 #clickedTechnoIframeclose, #clickedPeopleIframeclose, #clickedEnvironmentIframeclose{
@@ -171,7 +166,7 @@ ul {
 	margin: -15px 10px 10px 10px;
 	padding: 10px;
 	background-color: black;
-
+	border-radius: 4px;
 }
 
 #clickedfieldarrow{
@@ -186,6 +181,10 @@ ul {
 
 	#modalBox{
 		height: 100vw;
+	}
+
+	.CarouselField{
+		padding: 0px 2px !important;
 	}
 
 }
