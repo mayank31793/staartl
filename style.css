@@ -8,16 +8,17 @@ body{
 
 #staartlPlay{
 	z-index: 100;
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	position: absolute;
     animation-name: example;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 
+    /*Safari*/
     -webkit-animation-name: example; 
     -webkit-animation-duration: 2s;    
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 1;
 }
 
 @-webkit-keyframes example {

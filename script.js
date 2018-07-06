@@ -91,12 +91,17 @@ xhttp.onreadystatechange = function() {
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
       this.style.cursor = 'pointer';
       this.style.opacity = 0.7;
-      // this.appendChild(playImage);
-      // playImage.style.top = '0px';
+      console.log(this.id);
+      console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
+      document.getElementById('technoCarouselInner').appendChild(playImage);
+      playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
+      playImage.style.top = this.offsetLeft + (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';
+
     });
 
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseleave',function(e){
       this.style.opacity = 1;
+      this.removeChild(playImage);
     });
 
   }  
@@ -227,6 +232,12 @@ document.getElementById('video1').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src',data[0].techno[1].link);
   document.getElementsByClassName('modal-title')[0].innerHTML = data[0].techno[1].videotitle;
   document.getElementById('modalBody').innerHTML = data[0].techno[1].description;
+
+  //other iframe src null
+  document.getElementById('clickedTechnoIframe').setAttribute('src','');
+  document.getElementById('clickedPeopleIframe').setAttribute('src','');
+  document.getElementById('clickedEnvironmentIframe').setAttribute('src','');  
+
 });
 
 document.getElementById('video2').addEventListener('click',function(){
@@ -242,6 +253,7 @@ document.getElementById('video1').style.backgroundSize = '100% auto';
 
 //play button on hover for video1
 document.getElementById('video1').addEventListener('mouseenter',function(){
+  this.style.opacity = 0.8;
   this.appendChild(playImage);
   console.log(this.clientWidth);
   console.log(playImage.clientWidth);
@@ -251,6 +263,7 @@ document.getElementById('video1').addEventListener('mouseenter',function(){
 
 document.getElementById('video1').addEventListener('mouseleave',function(){
   this.removeChild(playImage);
+  this.style.opacity = 1;
 });
 
 document.getElementById('video2').style.height = '90vh';
@@ -261,6 +274,7 @@ document.getElementById('video2').style.backgroundPosition= 'center top';
 
 //play button on hover for video2
 document.getElementById('video2').addEventListener('mouseenter',function(){
+  this.style.opacity = 0.8;
   this.appendChild(playImage);
   console.log(this.clientWidth);
   console.log(playImage.clientWidth);
@@ -270,6 +284,7 @@ document.getElementById('video2').addEventListener('mouseenter',function(){
 
 document.getElementById('video2').addEventListener('mouseleave',function(){
   this.removeChild(playImage);
+  this.style.opacity = 1;
 });
 
 document.getElementById('video1').style.overflowY = 'hidden';
