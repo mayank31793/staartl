@@ -151,6 +151,11 @@ ul {
 	color: #ffffff;
 }
 
+#clickedTechnoIframe,#clickedPeopleIframe,#clickedEnvironmentIframe{
+	height: 500px;
+	width: 500px;
+}
+
 #clickedTechnoIframeclose, #clickedPeopleIframeclose, #clickedEnvironmentIframeclose{
 	float: right;
 	color: white;
@@ -170,7 +175,7 @@ ul {
 	margin: -15px 10px 10px 10px;
 	padding: 10px;
 	background-color: black;
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 #clickedfieldarrow{

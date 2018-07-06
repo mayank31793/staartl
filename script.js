@@ -59,6 +59,9 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedPeopleVid').style.display = 'none';
       document.getElementById('clickedEnvironmentVid').style.display = 'none';      
       document.getElementById('clickedTechnoVid').style.display = 'block';
+      var scrollPositionTechno = document.getElementById('clickedTechnoVid').offsetTop;
+      console.log(scrollPositionTechno);
+      window.scrollTo(0,scrollPositionTechno-100);
 
       //display only clicked arrow of category
       document.getElementById('clickedfieldarrowPeople').style.display = 'none';
@@ -73,8 +76,8 @@ xhttp.onreadystatechange = function() {
       //toggle div details
       document.getElementById('clickedTechnoVid').style.height = 'auto';
       document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
-      document.getElementById('clickedTechnoIframe').style.width = '500px';
-      document.getElementById('clickedTechnoIframe').style.height = '500px';
+      // document.getElementById('clickedTechnoIframe').style.width = '500px';
+      // document.getElementById('clickedTechnoIframe').style.height = '500px';
       document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
       document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
     });
@@ -102,6 +105,9 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedTechnoVid').style.display = 'none';
       document.getElementById('clickedEnvironmentVid').style.display = 'none';         
       document.getElementById('clickedPeopleVid').style.display = 'block';
+      var scrollPositionPeople = document.getElementById('clickedPeopleVid').offsetTop;
+      console.log(scrollPositionPeople);
+      window.scrollTo(0,scrollPositionPeople-100);      
 
       //display only clicked arrow of category
       document.getElementById('clickedfieldarrowTechno').style.display = 'none';
@@ -116,8 +122,8 @@ xhttp.onreadystatechange = function() {
       //toggle div details
       document.getElementById('clickedPeopleVid').style.height = 'auto';
       document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);
-      document.getElementById('clickedPeopleIframe').style.width = '500px';
-      document.getElementById('clickedPeopleIframe').style.height = '500px';      
+      // document.getElementById('clickedPeopleIframe').style.width = '500px';
+      // document.getElementById('clickedPeopleIframe').style.height = '500px';      
       document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
       document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
     });
@@ -146,6 +152,12 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedPeopleVid').style.display = 'none';
       document.getElementById('clickedEnvironmentVid').style.display = 'block';
 
+      //scroll
+      document.getElementById('clickedEnvironmentVid').style.scrollBehavior='smooth';
+      var scrollPositionEnvironment = document.getElementById('clickedEnvironmentVid').offsetTop;
+      console.log(scrollPositionEnvironment);
+      window.scrollTo(0,scrollPositionEnvironment-100);      
+
       //display only clicked arrow of category
       document.getElementById('clickedfieldarrowTechno').style.display = 'none';
       document.getElementById('clickedfieldarrowPeople').style.display = 'none';
@@ -158,11 +170,11 @@ xhttp.onreadystatechange = function() {
 
       //toggle div details
       document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
-      // document.getElementById('clickedEnvironmentIframe').style.transition = '0.8s';
-      document.getElementById('clickedEnvironmentIframe').style.width = '500px';
-      document.getElementById('clickedEnvironmentIframe').style.height = '500px';      
+      // document.getElementById('clickedEnvironmentIframe').style.width = '500px';
+      // document.getElementById('clickedEnvironmentIframe').style.height = '500px';
       document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
       document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
+
     });
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
       this.style.cursor = 'pointer';
@@ -255,18 +267,29 @@ if(window.innerWidth < 768){
   document.getElementById('demo2').style.height = '100px';
   document.getElementById('demo3').style.height = '100px';
 
+  //techno iframe height in mobile
   document.getElementById('clickedTechnoIframe').style.width = '100vw';
+  var frameHeight = document.getElementById('clickedTechnoIframe').style.width;
+  var frameHeightNumber = parseInt(frameHeight.substr(0, 3)) - 4;
+  console.log(parseInt(frameHeight.substr(0, 3)));
+  console.log(frameHeightNumber);
+  document.getElementById('clickedTechnoIframe').style.height = frameHeightNumber+'vw';
 
-  var mobileIframeHeight = document.getElementById('clickedTechnoIframe').style.width;
-  console.log(mobileIframeHeight);
+  //people iframe height in mobile
+  document.getElementById('clickedPeopleIframe').style.width = '100vw';
+  var frameHeight = document.getElementById('clickedPeopleIframe').style.width;
+  var frameHeightNumber = parseInt(frameHeight.substr(0, 3)) - 4;
+  console.log(parseInt(frameHeight.substr(0, 3)));
+  console.log(frameHeightNumber);
+  document.getElementById('clickedPeopleIframe').style.height = frameHeightNumber+'vw';
 
-  document.getElementById('clickedTechnoIframe').style.height = mobileIframeHeight+'vw';  
-
-  document.getElementById('clickedTechnoIframe').style.width = '100%';
-
-  var framewidth = document.getElementById('clickedTechnoIframe').offsetWidth;
-  document.getElementById('clickedTechnoIframe').style.height = framewidth+'px';
-  console.log('framewidth',framewidth);
+  //environment iframe height in mobile
+  document.getElementById('clickedEnvironmentIframe').style.width = '100vw';
+  var frameHeight = document.getElementById('clickedEnvironmentIframe').style.width;
+  var frameHeightNumber = parseInt(frameHeight.substr(0, 3)) - 4;
+  console.log(parseInt(frameHeight.substr(0, 3)));
+  console.log(frameHeightNumber);
+  document.getElementById('clickedEnvironmentIframe').style.height = frameHeightNumber+'vw';
 
 }
 
