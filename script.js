@@ -2,6 +2,11 @@
 
 var divCarousel,imgCarousel;
 
+var playImage = document.createElement('img');
+playImage.setAttribute('src','./assets/staartlPlay.png');
+playImage.setAttribute('id','staartlPlay');
+// document.getElementById('topVideos').appendChild(playImage);
+
 function categories(a,category,parentElement,field){
   if((a)%3 == 0){
 
@@ -86,6 +91,8 @@ xhttp.onreadystatechange = function() {
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
       this.style.cursor = 'pointer';
       this.style.opacity = 0.7;
+      // this.appendChild(playImage);
+      // playImage.style.top = '0px';
     });
 
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseleave',function(e){
@@ -228,22 +235,42 @@ document.getElementById('video2').addEventListener('click',function(){
   document.getElementById('modalBody').innerHTML = data[0].people[2].description;  
 });
 
-// document.getElementById('video3').addEventListener('click',function(){
-//   document.getElementById('modalBox').setAttribute('src',data[0].environment[0].link);
-//   document.getElementsByClassName('modal-title')[0].innerHTML = data[0].environment[0].videotitle;
-//   document.getElementById('modalBody').innerHTML = data[0].environment[0].description;  
-// });
-
 document.getElementById('video1').style.height = '90vh';
 document.getElementById('video1').style.backgroundImage = "url('./assets/english/mars.jpg')";
 document.getElementById('video1').style.backgroundRepeat = 'no-repeat';
 document.getElementById('video1').style.backgroundSize = '100% auto';
+
+//play button on hover for video1
+document.getElementById('video1').addEventListener('mouseenter',function(){
+  this.appendChild(playImage);
+  console.log(this.clientWidth);
+  console.log(playImage.clientWidth);
+  playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
+  playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';  
+});
+
+document.getElementById('video1').addEventListener('mouseleave',function(){
+  this.removeChild(playImage);
+});
 
 document.getElementById('video2').style.height = '90vh';
 document.getElementById('video2').style.backgroundImage = "url('./assets/english/afghan.jpg')";
 document.getElementById('video2').style.backgroundRepeat = 'no-repeat';
 document.getElementById('video2').style.backgroundSize = '130% auto';
 document.getElementById('video2').style.backgroundPosition= 'center top';
+
+//play button on hover for video2
+document.getElementById('video2').addEventListener('mouseenter',function(){
+  this.appendChild(playImage);
+  console.log(this.clientWidth);
+  console.log(playImage.clientWidth);
+  playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
+  playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';
+});
+
+document.getElementById('video2').addEventListener('mouseleave',function(){
+  this.removeChild(playImage);
+});
 
 document.getElementById('video1').style.overflowY = 'hidden';
 document.getElementById('video2').style.overflowY = 'hidden';
