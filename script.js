@@ -63,6 +63,10 @@ xhttp.onreadystatechange = function() {
       console.log(scrollPositionTechno);
       window.scrollTo(0,scrollPositionTechno-100);
 
+      //other iframe src
+      document.getElementById('clickedPeopleIframe').setAttribute('src','');
+      document.getElementById('clickedEnvironmentIframe').setAttribute('src','');
+
       //display only clicked arrow of category
       document.getElementById('clickedfieldarrowPeople').style.display = 'none';
       document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';      
@@ -76,8 +80,6 @@ xhttp.onreadystatechange = function() {
       //toggle div details
       document.getElementById('clickedTechnoVid').style.height = 'auto';
       document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
-      // document.getElementById('clickedTechnoIframe').style.width = '500px';
-      // document.getElementById('clickedTechnoIframe').style.height = '500px';
       document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
       document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
     });
@@ -107,7 +109,11 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedPeopleVid').style.display = 'block';
       var scrollPositionPeople = document.getElementById('clickedPeopleVid').offsetTop;
       console.log(scrollPositionPeople);
-      window.scrollTo(0,scrollPositionPeople-100);      
+      window.scrollTo(0,scrollPositionPeople-100);  
+
+      //other iframe src
+      document.getElementById('clickedTechnoIframe').setAttribute('src','');
+      document.getElementById('clickedEnvironmentIframe').setAttribute('src','');          
 
       //display only clicked arrow of category
       document.getElementById('clickedfieldarrowTechno').style.display = 'none';
@@ -121,9 +127,7 @@ xhttp.onreadystatechange = function() {
 
       //toggle div details
       document.getElementById('clickedPeopleVid').style.height = 'auto';
-      document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);
-      // document.getElementById('clickedPeopleIframe').style.width = '500px';
-      // document.getElementById('clickedPeopleIframe').style.height = '500px';      
+      document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);      
       document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
       document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
     });
@@ -157,6 +161,10 @@ xhttp.onreadystatechange = function() {
       var scrollPositionEnvironment = document.getElementById('clickedEnvironmentVid').offsetTop;
       console.log(scrollPositionEnvironment);
       window.scrollTo(0,scrollPositionEnvironment-100);      
+
+      //other iframe src
+      document.getElementById('clickedPeopleIframe').setAttribute('src','');
+      document.getElementById('clickedTechnoIframe').setAttribute('src','');
 
       //display only clicked arrow of category
       document.getElementById('clickedfieldarrowTechno').style.display = 'none';
