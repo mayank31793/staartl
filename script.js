@@ -379,3 +379,15 @@ document.getElementById('clickedEnvironmentIframeclose').addEventListener('click
   closeIframe('clickedfieldarrowEnvironment','clickedEnvironmentVid','clickedEnvironmentIframe');
 });
 
+document.getElementById('clickedTechnoIframecloseMobile').addEventListener('click',function(){
+  closeIframe('clickedfieldarrowTechno','clickedTechnoVid','clickedTechnoIframe');
+});
+
+document.getElementById('clickedPeopleIframecloseMobile').addEventListener('click',function(){
+  closeIframe('clickedfieldarrowPeople','clickedPeopleVid','clickedPeopleIframe');
+});
+
+document.getElementById('clickedEnvironmentIframecloseMobile').addEventListener('click',function(){
+  closeIframe('clickedfieldarrowEnvironment','clickedEnvironmentVid','clickedEnvironmentIframe');
+});
+

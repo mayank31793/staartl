@@ -135,14 +135,14 @@ ul {
 	width: 500px;
 }
 
-#clickedTechnoIframeclose, #clickedPeopleIframeclose, #clickedEnvironmentIframeclose{
+#clickedTechnoIframeclose, #clickedPeopleIframeclose, #clickedEnvironmentIframeclose,#clickedTechnoIframecloseMobile,#clickedPeopleIframecloseMobile,#clickedEnvironmentIframecloseMobile{
 	float: right;
 	color: white;
     font-size: 25px;
     margin: -7px -13px;	
 }
 
-#clickedTechnoIframeclose:hover, #clickedPeopleIframeclose:hover, #clickedEnvironmentIframeclose:hover{
+#clickedTechnoIframeclose:hover, #clickedPeopleIframeclose:hover, #clickedEnvironmentIframeclose:hover, #clickedTechnoIframecloseMobile:hover, #clickedPeopleIframecloseMobile:hover, #clickedEnvironmentIframecloseMobile:hover{
 	cursor: pointer;	
 }
 
@@ -174,5 +174,10 @@ ul {
 	.CarouselField{
 		padding: 0px 2px !important;
 	}
+
+	#staartlPlay{
+		width: 50px;
+		height: 50px;
+	}		
 
 }
