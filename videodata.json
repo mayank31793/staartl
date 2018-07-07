@@ -20,7 +20,7 @@
 			},
 			{
 				"videotitle": "WhatsApp",
-				"thumbnail": "./assets/whatsapp.jpg",
+				"thumbnail": "./assets/english/whatsapp.jpg",
 				"description": "WhatsApp founder Jan Koum has quit Facebook after disagreements over data privacy! See how he went from social welfare to the head of a 19 billion dollar company - here is the incredible story of WhatsApp.",
 				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartl%2Fvideos%2F368824120298000%2F&show_text=0&width=476"
 			},
@@ -44,12 +44,7 @@
 			}			
 		],
 
-		"people": [{
-				"videotitle": "Syrian animal rescue",
-				"thumbnail": "./assets/english/syria.jpg",
-				"description": "Aleppo, Syria: In a zoo which had 300 animals, only 13 remained. Watch how 'Four Paws', an animal welfare group based in Austria, rescued the animals.",
-				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartl%2Fvideos%2F377284326118646%2F&show_text=0&width=476"
-			},
+		"people": [
 			{
 				"videotitle": "Jaipur Foot",
 				"thumbnail": "./assets/english/jaipur.jpg",
@@ -67,7 +62,13 @@
 				"thumbnail": "./assets/english/dadasaheb.jpg",
 				"description": "Before there was the Indian Film Industry, there was Dadasaheb Phalke. Watch how he made India's first film.",
 				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartl%2Fvideos%2F409211509592594%2F&show_text=0&width=476"
-			}
+			},
+			{
+				"videotitle": "Syrian animal rescue",
+				"thumbnail": "./assets/english/syria.jpg",
+				"description": "Aleppo, Syria: In a zoo which had 300 animals, only 13 remained. Watch how 'Four Paws', an animal welfare group based in Austria, rescued the animals.",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartl%2Fvideos%2F377284326118646%2F&show_text=0&width=476"
+			}		
 		],
 
 		"environment": [{

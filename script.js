@@ -92,16 +92,17 @@ xhttp.onreadystatechange = function() {
       this.style.cursor = 'pointer';
       this.style.opacity = 0.7;
       console.log(this.id);
-      console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
       document.getElementById('technoCarouselInner').appendChild(playImage);
-      playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
-      playImage.style.top = this.offsetLeft + (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';
+      var leftPosition = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2 ;
+      console.log(leftPosition);
+      playImage.style.left = leftPosition+'px';
+      console.log(typeof playImage.style.left);
+      playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
 
     });
 
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseleave',function(e){
       this.style.opacity = 1;
-      this.removeChild(playImage);
     });
 
   }  
@@ -146,6 +147,12 @@ xhttp.onreadystatechange = function() {
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseenter',function(e){
       this.style.cursor = 'pointer';
       this.style.opacity = 0.7;
+      console.log(this.id);
+      console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
+      document.getElementById('peopleCarouselInner').appendChild(playImage);
+      playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
+      playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
+
     });
 
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseleave',function(e){
@@ -190,8 +197,6 @@ xhttp.onreadystatechange = function() {
 
       //toggle div details
       document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
-      // document.getElementById('clickedEnvironmentIframe').style.width = '500px';
-      // document.getElementById('clickedEnvironmentIframe').style.height = '500px';
       document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
       document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
 
@@ -199,6 +204,12 @@ xhttp.onreadystatechange = function() {
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
       this.style.cursor = 'pointer';
       this.style.opacity = 0.7;
+      console.log(this.id);
+      console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
+      document.getElementById('environmentCarouselInner').appendChild(playImage);
+      playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
+      playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
+
     });
 
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseleave',function(e){
@@ -349,23 +360,6 @@ var environmentRow = document.getElementById('environmentRow');
 var technoCarouselDiv = document.getElementById('technoCarouselInner');
 var peopleCarouselDiv = document.getElementById('peopleCarouselInner');
 var environmentCarouselDiv = document.getElementById('environmentCarouselInner');
-
-document.getElementById('languageBox').addEventListener('click',function(){
-  document.getElementById('languagesAvailable').style.display = 'inline-block';
-});
-
-document.getElementById('closeLanguageBox').addEventListener('click',function(){
-  document.getElementById('languagesAvailable').style.display = 'none';
-});
-
-// document.getElementById('english').addEventListener('click',function(){
-//   document.getElementById('language').innerHTML = 'English';  
-// });
-
-// document.getElementById('hindi').addEventListener('click',function(){
-//   document.getElementById('language').innerHTML = 'हिन्दी'; 
-//   console.log('Hindi');
-// });
 
 function closeIframe(arrow,opened,iframesrc){
   document.getElementById(arrow).style.display = 'none';
