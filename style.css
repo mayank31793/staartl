@@ -35,6 +35,10 @@ body{
     to {transform: rotate(360deg);}
 }
 
+#staartlPlay:hover{
+	cursor: pointer;
+}
+
 .big{
 	/*background-color: red;*/
 	/*background-image: url('./assets/english/afghan.jpg');*/

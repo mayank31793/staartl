@@ -3,7 +3,6 @@ var divCarousel,imgCarousel;
 var playImage = document.createElement('img');
 playImage.setAttribute('src','./assets/staartlPlay.png');
 playImage.setAttribute('id','staartlPlay');
-// document.getElementById('topVideos').appendChild(playImage);
 
 function categories(a,category,parentElement,field){
   if((a)%3 == 0){
@@ -87,15 +86,56 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
     });
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
+      var getId = this.id;
       this.style.cursor = 'pointer';
-      this.style.opacity = 0.7;
-      console.log(this.id);
+      // this.style.opacity = 0.7;
+      console.log('closest id ',this.id);
       document.getElementById('technoCarouselInner').appendChild(playImage);
       var leftPosition = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2 ;
       console.log(leftPosition);
       playImage.style.left = leftPosition+'px';
       console.log(typeof playImage.style.left);
       playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
+
+      playImage.addEventListener('click',function(){
+        var hovergetId = document.querySelector('#'+getId).getAttribute('id');
+        console.log(hovergetId);
+
+        var strget = hovergetId;
+        var strpos = strget.charAt(6);
+        var numstrpos = parseInt(strpos);
+
+        var arrowpositiontechno = this.offsetLeft + (this.offsetWidth)/2;
+
+        //display only clicked category
+        document.getElementById('clickedPeopleVid').style.display = 'none';
+        document.getElementById('clickedEnvironmentVid').style.display = 'none';      
+        document.getElementById('clickedTechnoVid').style.display = 'block';
+        var scrollPositionTechno = document.getElementById('clickedTechnoVid').offsetTop;
+        console.log(scrollPositionTechno);
+        window.scrollTo(0,scrollPositionTechno-100);
+
+        //other iframe src
+        document.getElementById('clickedPeopleIframe').setAttribute('src','');
+        document.getElementById('clickedEnvironmentIframe').setAttribute('src','');
+
+        //display only clicked arrow of category
+        document.getElementById('clickedfieldarrowPeople').style.display = 'none';
+        document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';      
+
+        //arrow pointing which field is open in description
+        document.getElementById('clickedfieldarrowTechno').style.display = 'block';
+        document.getElementById('clickedfieldarrowTechno').style.position = 'relative';
+        document.getElementById('clickedfieldarrowTechno').style.top = '-12px';
+        document.getElementById('clickedfieldarrowTechno').style.left = arrowpositiontechno+'px';
+
+        //toggle div details
+        document.getElementById('clickedTechnoVid').style.height = 'auto';
+        document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
+        document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
+        document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
+
+      });           
 
     });
 
@@ -143,13 +183,53 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
     });
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseenter',function(e){
+      var getId = this.id;
       this.style.cursor = 'pointer';
-      this.style.opacity = 0.7;
+      // this.style.opacity = 0.7;
       console.log(this.id);
       console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
       document.getElementById('peopleCarouselInner').appendChild(playImage);
       playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
       playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
+
+      playImage.addEventListener('click',function(){
+        var hovergetId = document.querySelector('#'+getId).getAttribute('id');
+        console.log(hovergetId);
+
+        var strget = hovergetId;
+        var strpos = strget.charAt(6);
+        var numstrpos = parseInt(strpos);   
+
+        var arrowpositionpeople = this.offsetLeft + (this.offsetWidth)/2;
+
+        //display only clicked category
+        document.getElementById('clickedTechnoVid').style.display = 'none';
+        document.getElementById('clickedEnvironmentVid').style.display = 'none';         
+        document.getElementById('clickedPeopleVid').style.display = 'block';
+        var scrollPositionPeople = document.getElementById('clickedPeopleVid').offsetTop;
+        console.log(scrollPositionPeople);
+        window.scrollTo(0,scrollPositionPeople-100);  
+
+        //other iframe src
+        document.getElementById('clickedTechnoIframe').setAttribute('src','');
+        document.getElementById('clickedEnvironmentIframe').setAttribute('src','');          
+
+        //display only clicked arrow of category
+        document.getElementById('clickedfieldarrowTechno').style.display = 'none';
+        document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';
+
+        //arrow pointing which field is open in description
+        document.getElementById('clickedfieldarrowPeople').style.display = 'block';
+        document.getElementById('clickedfieldarrowPeople').style.position = 'relative';
+        document.getElementById('clickedfieldarrowPeople').style.top = '-12px';
+        document.getElementById('clickedfieldarrowPeople').style.left = arrowpositionpeople+'px';      
+
+        //toggle div details
+        document.getElementById('clickedPeopleVid').style.height = 'auto';
+        document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);      
+        document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
+        document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
+        }); 
 
     });
 
@@ -200,13 +280,56 @@ xhttp.onreadystatechange = function() {
 
     });
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
+      var getId = this.id;
       this.style.cursor = 'pointer';
-      this.style.opacity = 0.7;
+      // this.style.opacity = 0.7;
       console.log(this.id);
       console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
       document.getElementById('environmentCarouselInner').appendChild(playImage);
       playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
       playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
+
+      playImage.addEventListener('click',function(){
+        var hovergetId = document.querySelector('#'+getId).getAttribute('id');
+        console.log(hovergetId);
+
+        var strget = hovergetId;
+        var strpos = strget.charAt(11);
+        var numstrpos = parseInt(strpos); 
+
+        var arrowpositionenvironment = this.offsetLeft + (this.offsetWidth)/2;
+
+        //display only clicked category
+        document.getElementById('clickedTechnoVid').style.display = 'none';
+        document.getElementById('clickedPeopleVid').style.display = 'none';
+        document.getElementById('clickedEnvironmentVid').style.display = 'block';
+
+        //scroll
+        document.getElementById('clickedEnvironmentVid').style.scrollBehavior='smooth';
+        var scrollPositionEnvironment = document.getElementById('clickedEnvironmentVid').offsetTop;
+        console.log(scrollPositionEnvironment);
+        window.scrollTo(0,scrollPositionEnvironment-100);      
+
+        //other iframe src
+        document.getElementById('clickedPeopleIframe').setAttribute('src','');
+        document.getElementById('clickedTechnoIframe').setAttribute('src','');
+
+        //display only clicked arrow of category
+        document.getElementById('clickedfieldarrowTechno').style.display = 'none';
+        document.getElementById('clickedfieldarrowPeople').style.display = 'none';
+
+        //arrow pointing which field is open in description
+        document.getElementById('clickedfieldarrowEnvironment').style.display = 'block';
+        document.getElementById('clickedfieldarrowEnvironment').style.position = 'relative';
+        document.getElementById('clickedfieldarrowEnvironment').style.top = '-12px';
+        document.getElementById('clickedfieldarrowEnvironment').style.left = arrowpositionenvironment+'px';       
+
+        //toggle div details
+        document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
+        document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
+        document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
+
+      }); 
 
     });
 
@@ -223,6 +346,19 @@ var pathFile = (hashValue == "")?"videodata.json":(hashValue == "#english")?"vid
 
 xhttp.open("GET",pathFile, true);
 xhttp.send();
+
+//staartlplay button remove
+document.getElementById('demo').addEventListener('mouseleave',function(){
+  document.getElementById('staartlPlay').remove();
+});
+
+document.getElementById('demo2').addEventListener('mouseleave',function(){
+  document.getElementById('staartlPlay').remove();
+});
+
+document.getElementById('demo3').addEventListener('mouseleave',function(){
+  document.getElementById('staartlPlay').remove();
+});
 
 //carousel height
 document.getElementById('demo').style.height = '250px';
@@ -252,9 +388,9 @@ document.getElementById('video1').addEventListener('click',function(){
 });
 
 document.getElementById('video2').addEventListener('click',function(){
-  document.getElementById('modalBox').setAttribute('src',data[0].people[2].link);
-  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].people[2].videotitle;
-  document.getElementById('modalBody').innerHTML = data[0].people[2].description;  
+  document.getElementById('modalBox').setAttribute('src',data[0].people[1].link);
+  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].people[1].videotitle;
+  document.getElementById('modalBody').innerHTML = data[0].people[1].description;  
 });
 
 document.getElementById('video1').style.height = '90vh';

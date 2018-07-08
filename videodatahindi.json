@@ -33,17 +33,17 @@
 				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1716263195086431%2F&show_text=0&width=476"
 			},
 			{
-				"videotitle": "जयपुर फुट",
-				"thumbnail": "./assets/hindi/jaipur-web-hindi.jpg",
-				"description": "'जयपुर फुट' दशकों से विकलांगों को सशक्त बना रहा है। इस भारतीय आविष्कार और संगठन के बारे में और जानें!",
-				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1734102179969199%2F&show_text=0&width=476"			
-			},
-			{
 				"videotitle": "अफ़ग़ान लड़की",
 				"thumbnail": "./assets/hindi/afghan-web-hindi.jpg",
 				"description": "ये है वो अविश्वसनीय तस्वीर, 'द अफ़ग़ान गर्ल'। जानिए असली अफ़ग़ान गर्ल के कहानी।",
 				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1746432325402851%2F&show_text=0&width=476"
 			},
+			{
+				"videotitle": "जयपुर फुट",
+				"thumbnail": "./assets/hindi/jaipur-web-hindi.jpg",
+				"description": "'जयपुर फुट' दशकों से विकलांगों को सशक्त बना रहा है। इस भारतीय आविष्कार और संगठन के बारे में और जानें!",
+				"link":"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fstaartlhindi%2Fvideos%2F1734102179969199%2F&show_text=0&width=476"			
+			},			
 			{
 				"videotitle": "राजा हरिश्चंद्र",
 				"thumbnail": "./assets/hindi/dadasaheb-web-hindi.jpg",
