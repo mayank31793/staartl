@@ -219,7 +219,7 @@ xhttp.onreadystatechange = function() {
   }
 };
 
-var pathFile = (window.location.hash == "")?"videodata.json":"videodatahindi.json";
+var pathFile = (hashValue == "")?"videodata.json":(hashValue == "#english")?"videodata.json":"videodatahindi.json";
 
 xhttp.open("GET",pathFile, true);
 xhttp.send();
@@ -258,7 +258,7 @@ document.getElementById('video2').addEventListener('click',function(){
 });
 
 document.getElementById('video1').style.height = '90vh';
-document.getElementById('video1').style.backgroundImage = (window.location.hash == "")?"url('./assets/english/mars.jpg')":"url('./assets/hindi/mars-web-hindi.jpg')";
+document.getElementById('video1').style.backgroundImage = (hashValue == "")?"url('./assets/english/mars.jpg')":"url('./assets/hindi/mars-web-hindi.jpg')";
 document.getElementById('video1').style.backgroundRepeat = 'no-repeat';
 document.getElementById('video1').style.backgroundSize = '100% auto';
 
@@ -278,7 +278,7 @@ document.getElementById('video1').addEventListener('mouseleave',function(){
 });
 
 document.getElementById('video2').style.height = '90vh';
-document.getElementById('video2').style.backgroundImage = (window.location.hash == "")?"url('./assets/english/afghan.jpg')":"url('./assets/hindi/afghan-web-hindi.jpg')";
+document.getElementById('video2').style.backgroundImage = (hashValue == "")?"url('./assets/english/afghan.jpg')":"url('./assets/hindi/afghan-web-hindi.jpg')";
 document.getElementById('video2').style.backgroundRepeat = 'no-repeat';
 document.getElementById('video2').style.backgroundSize = '130% auto';
 document.getElementById('video2').style.backgroundPosition= 'center top';
@@ -372,6 +372,18 @@ document.getElementById('ContactLink').addEventListener('click',function(){
 });
 
 document.getElementById('lang').addEventListener('click',function(){
-  location.reload();
+  document.getElementById('languageList').style.display = 'inline';
 });
+
+document.getElementById('english').addEventListener('click',function(){
+  location.reload();
+
+  // document.getElementById('lang').innerHTML = (hashValue == "")?'English':(hashValue == "#english")?'english':'हिंदी';
+});
+
+document.getElementById('hindi').addEventListener('click',function(){
+  location.reload();
+    // document.getElementById('lang').innerHTML = (hashValue == "")?'English':(hashValue == "#english")?'english':'हिंदी';
+});
+
 

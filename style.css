@@ -179,10 +179,17 @@ ul {
 	color: white;
 }
 
+#languageList{
+	position: fixed;
+	display: none;
+	bottom: 50px;
+	right: 5px;
+}
+
 #lang{
 	position: fixed;
-	bottom: 0px;
-	right: 0px;
+	bottom: 5px;
+	right: 5px;
 }
 
 @media screen and (max-width:767px){	
