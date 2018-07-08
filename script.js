@@ -84,6 +84,7 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
       document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
       document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
+      document.getElementById('clickedTechnoIframeDescription').style.fontFamily = 'fantasy';
     });
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
       var getId = this.id;
@@ -134,7 +135,7 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
         document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
         document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
-
+        document.getElementById('clickedTechnoIframeDescription').style.fontFamily = 'fantasy';
       });           
 
     });
@@ -181,6 +182,7 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);      
       document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
       document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
+      document.getElementById('clickedPeopleIframeDescription').style.fontFamily = 'fantasy';
     });
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseenter',function(e){
       var getId = this.id;
@@ -229,7 +231,8 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);      
         document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
         document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
-        }); 
+        document.getElementById('clickedPeopleIframeDescription').style.fontFamily = 'fantasy';
+      }); 
 
     });
 
@@ -277,7 +280,7 @@ xhttp.onreadystatechange = function() {
       document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
       document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
       document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
-
+      document.getElementById('clickedEnvironmentIframeDescription').style.fontFamily = 'fantasy';
     });
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
       var getId = this.id;
@@ -328,7 +331,7 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
         document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
         document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
-
+        document.getElementById('clickedEnvironmentIframeDescription').style.fontFamily = 'fantasy';
       }); 
 
     });
@@ -509,13 +512,10 @@ document.getElementById('lang').addEventListener('click',function(){
 
 document.getElementById('english').addEventListener('click',function(){
   location.reload();
-
-  // document.getElementById('lang').innerHTML = (hashValue == "")?'English':(hashValue == "#english")?'english':'हिंदी';
 });
 
 document.getElementById('hindi').addEventListener('click',function(){
   location.reload();
-    // document.getElementById('lang').innerHTML = (hashValue == "")?'English':(hashValue == "#english")?'english':'हिंदी';
 });
 
 
