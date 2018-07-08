@@ -22,13 +22,10 @@
   <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
     <ul class="navbar-nav">
 		<li class="nav-item">
-		<a class="nav-link" href="#">Home</a>
+		<a class="nav-link" id="socialLink">Social</a>
 		</li>
 		<li class="nav-item">
-		<a class="nav-link" href="#">Blog</a>
-		</li>
-		<li class="nav-item">
-		<a class="nav-link" href="#">Contact Us</a>
+		<a class="nav-link" id="ContactLink">Contact Us</a>
 		</li>    
     </ul>    
   </div>  
@@ -198,14 +195,36 @@
 </div>
 
 <div class="container-fluid" id="footer">
-	<div class="row justify-content-start">
-		<b>&copy; 2018 staartl – All rights reserved</b>
+	<div class="row">
+		<div class="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
+			<center>
+				<b>Contact Us&nbsp;:&nbsp;</b>
+				<div>
+					<p id="email">hello@staartl.com</p>		
+				</div>
+			</center>
+		</div>
+		<div class="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
+			<center>
+				<b>Social:</b>
+				<div>
+					<a href="https://www.facebook.com/staartl/" target="_blank"><img src="./assets/fb.png" id="fblogo"></a>
+					<a href="https://www.linkedin.com/company/staartl/" target="_blank"><img src="./assets/linkedin.png" id="linkedlogo"></a> 
+				</div>
+			</center>				
+		</div>
+		<div class="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
+			<b>&copy; 2018 staartl – All rights reserved</b>
+		</div>				
 	</div>
 </div>
 
-
+<div class="btn btn-info" id="lang">
+	<a href="#lang">Language</a>
+</div>
 
 <script type="text/javascript" src='script.js'></script>
+<script type="text/javascript" src='iframes.js'></script>
 
 </body>
 </html>
