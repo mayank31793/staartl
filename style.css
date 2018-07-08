@@ -196,6 +196,17 @@ ul {
 	right: 5px;
 }
 
+.prevnext{
+	width: 50px;
+	height: 100px;
+}
+
+.signs,.signs2,.signs3{
+	display: none;
+	width: 30px;
+	padding-top: 75px;
+}
+
 @media screen and (max-width:767px){	
 
 	.environmentVideo,.peopleVideo,.technoVideo{
@@ -214,5 +225,11 @@ ul {
 		width: 50px;
 		height: 50px;
 	}		
+
+	.signs,.signs2,.signs3{
+		display: none;
+		width: 30px;
+		padding-top: 0px;
+	}	
 
 }

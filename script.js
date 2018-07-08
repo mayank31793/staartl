@@ -347,6 +347,37 @@ var pathFile = (hashValue == "")?"videodata.json":(hashValue == "#english")?"vid
 xhttp.open("GET",pathFile, true);
 xhttp.send();
 
+//Left Right arrow appear
+document.getElementById('demo').addEventListener('mouseenter',function(){
+  document.getElementsByClassName('signs')[0].style.display = 'block';
+  document.getElementsByClassName('signs')[1].style.display = 'block';
+});
+
+document.getElementById('demo2').addEventListener('mouseenter',function(){
+  document.getElementsByClassName('signs2')[0].style.display = 'block';
+  document.getElementsByClassName('signs2')[1].style.display = 'block';
+});
+
+document.getElementById('demo3').addEventListener('mouseenter',function(){
+  document.getElementsByClassName('signs3')[0].style.display = 'block';
+  document.getElementsByClassName('signs3')[1].style.display = 'block';
+});
+
+document.getElementById('demo').addEventListener('mouseleave',function(){
+  document.getElementsByClassName('signs')[0].style.display = 'none';
+  document.getElementsByClassName('signs')[1].style.display = 'none';  
+});
+
+document.getElementById('demo2').addEventListener('mouseleave',function(){
+  document.getElementsByClassName('signs2')[0].style.display = 'none';
+  document.getElementsByClassName('signs2')[1].style.display = 'none';  
+});
+
+document.getElementById('demo3').addEventListener('mouseleave',function(){
+  document.getElementsByClassName('signs3')[0].style.display = 'none';
+  document.getElementsByClassName('signs3')[1].style.display = 'none';  
+});
+
 //staartlplay button remove
 document.getElementById('demo').addEventListener('mouseleave',function(){
   document.getElementById('staartlPlay').remove();
@@ -375,72 +406,72 @@ document.getElementById('clickedfieldarrowTechno').style.display = 'none';
 document.getElementById('clickedfieldarrowPeople').style.display = 'none';
 document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';
 
-document.getElementById('video1').addEventListener('click',function(){
-  document.getElementById('modalBox').setAttribute('src',data[0].techno[1].link);
-  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].techno[1].videotitle;
-  document.getElementById('modalBody').innerHTML = data[0].techno[1].description;
+// document.getElementById('video1').addEventListener('click',function(){
+//   document.getElementById('modalBox').setAttribute('src',data[0].techno[1].link);
+//   document.getElementsByClassName('modal-title')[0].innerHTML = data[0].techno[1].videotitle;
+//   document.getElementById('modalBody').innerHTML = data[0].techno[1].description;
 
-  //other iframe src null
-  document.getElementById('clickedTechnoIframe').setAttribute('src','');
-  document.getElementById('clickedPeopleIframe').setAttribute('src','');
-  document.getElementById('clickedEnvironmentIframe').setAttribute('src','');  
+//   //other iframe src null
+//   document.getElementById('clickedTechnoIframe').setAttribute('src','');
+//   document.getElementById('clickedPeopleIframe').setAttribute('src','');
+//   document.getElementById('clickedEnvironmentIframe').setAttribute('src','');  
 
-});
+// });
 
-document.getElementById('video2').addEventListener('click',function(){
-  document.getElementById('modalBox').setAttribute('src',data[0].people[1].link);
-  document.getElementsByClassName('modal-title')[0].innerHTML = data[0].people[1].videotitle;
-  document.getElementById('modalBody').innerHTML = data[0].people[1].description;  
-});
+// document.getElementById('video2').addEventListener('click',function(){
+//   document.getElementById('modalBox').setAttribute('src',data[0].people[1].link);
+//   document.getElementsByClassName('modal-title')[0].innerHTML = data[0].people[1].videotitle;
+//   document.getElementById('modalBody').innerHTML = data[0].people[1].description;  
+// });
 
-document.getElementById('video1').style.height = '90vh';
-document.getElementById('video1').style.backgroundImage = (hashValue == "")?"url('./assets/english/mars.jpg')":"url('./assets/hindi/mars-web-hindi.jpg')";
-document.getElementById('video1').style.backgroundRepeat = 'no-repeat';
-document.getElementById('video1').style.backgroundSize = '100% auto';
+// document.getElementById('video1').style.height = '90vh';
+// document.getElementById('video1').style.backgroundImage = (hashValue == "")?"url('./assets/english/mars.jpg')":"url('./assets/hindi/mars-web-hindi.jpg')";
+// document.getElementById('video1').style.backgroundRepeat = 'no-repeat';
+// document.getElementById('video1').style.backgroundSize = '100% auto';
 
-//play button on hover for video1
-document.getElementById('video1').addEventListener('mouseenter',function(){
-  this.style.opacity = 0.8;
-  this.appendChild(playImage);
-  console.log(this.clientWidth);
-  console.log(playImage.clientWidth);
-  playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
-  playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';  
-});
+// //play button on hover for video1
+// document.getElementById('video1').addEventListener('mouseenter',function(){
+//   this.style.opacity = 0.8;
+//   this.appendChild(playImage);
+//   console.log(this.clientWidth);
+//   console.log(playImage.clientWidth);
+//   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
+//   playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';  
+// });
 
-document.getElementById('video1').addEventListener('mouseleave',function(){
-  this.removeChild(playImage);
-  this.style.opacity = 1;
-});
+// document.getElementById('video1').addEventListener('mouseleave',function(){
+//   this.removeChild(playImage);
+//   this.style.opacity = 1;
+// });
 
-document.getElementById('video2').style.height = '90vh';
-document.getElementById('video2').style.backgroundImage = (hashValue == "")?"url('./assets/english/afghan.jpg')":"url('./assets/hindi/afghan-web-hindi.jpg')";
-document.getElementById('video2').style.backgroundRepeat = 'no-repeat';
-document.getElementById('video2').style.backgroundSize = '130% auto';
-document.getElementById('video2').style.backgroundPosition= 'center top';
+// document.getElementById('video2').style.height = '90vh';
+// document.getElementById('video2').style.backgroundImage = (hashValue == "")?"url('./assets/english/afghan.jpg')":"url('./assets/hindi/afghan-web-hindi.jpg')";
+// document.getElementById('video2').style.backgroundRepeat = 'no-repeat';
+// document.getElementById('video2').style.backgroundSize = '130% auto';
+// document.getElementById('video2').style.backgroundPosition= 'center top';
 
-//play button on hover for video2
-document.getElementById('video2').addEventListener('mouseenter',function(){
-  this.style.opacity = 0.8;
-  this.appendChild(playImage);
-  console.log(this.clientWidth);
-  console.log(playImage.clientWidth);
-  playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
-  playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';
-});
+// //play button on hover for video2
+// document.getElementById('video2').addEventListener('mouseenter',function(){
+//   this.style.opacity = 0.8;
+//   this.appendChild(playImage);
+//   console.log(this.clientWidth);
+//   console.log(playImage.clientWidth);
+//   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
+//   playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';
+// });
 
-document.getElementById('video2').addEventListener('mouseleave',function(){
-  this.removeChild(playImage);
-  this.style.opacity = 1;
-});
+// document.getElementById('video2').addEventListener('mouseleave',function(){
+//   this.removeChild(playImage);
+//   this.style.opacity = 1;
+// });
 
-document.getElementById('video1').style.overflowY = 'hidden';
-document.getElementById('video2').style.overflowY = 'hidden';
-// document.getElementById('video3').style.overflowY = 'hidden';
+// document.getElementById('video1').style.overflowY = 'hidden';
+// document.getElementById('video2').style.overflowY = 'hidden';
+// // document.getElementById('video3').style.overflowY = 'hidden';
 
-document.getElementById('video1').style.border = '1px solid white';
-document.getElementById('video2').style.border = '1px solid white';
-// document.getElementById('video3').style.border = '1px solid white';
+// document.getElementById('video1').style.border = '1px solid white';
+// document.getElementById('video2').style.border = '1px solid white';
+// // document.getElementById('video3').style.border = '1px solid white';
 
 document.getElementById('closeModal').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src','');
@@ -454,41 +485,6 @@ topvideocontainer.style.height = '90vh';
 
 main.style.height = '90vh';
 mini.style.height = '90vh';
-
-if(window.innerWidth < 768){
-
-  main.style.height = '45vh';
-	mini.style.height = '45vh';
-
-  document.getElementById('demo').style.height = '100px';
-  document.getElementById('demo2').style.height = '100px';
-  document.getElementById('demo3').style.height = '100px';
-
-  //techno iframe height in mobile
-  document.getElementById('clickedTechnoIframe').style.width = '100vw';
-  var frameHeight = document.getElementById('clickedTechnoIframe').style.width;
-  var frameHeightNumber = parseInt(frameHeight.substr(0, 3)) - 4;
-  console.log(parseInt(frameHeight.substr(0, 3)));
-  console.log(frameHeightNumber);
-  document.getElementById('clickedTechnoIframe').style.height = frameHeightNumber+'vw';
-
-  //people iframe height in mobile
-  document.getElementById('clickedPeopleIframe').style.width = '100vw';
-  var frameHeight = document.getElementById('clickedPeopleIframe').style.width;
-  var frameHeightNumber = parseInt(frameHeight.substr(0, 3)) - 4;
-  console.log(parseInt(frameHeight.substr(0, 3)));
-  console.log(frameHeightNumber);
-  document.getElementById('clickedPeopleIframe').style.height = frameHeightNumber+'vw';
-
-  //environment iframe height in mobile
-  document.getElementById('clickedEnvironmentIframe').style.width = '100vw';
-  var frameHeight = document.getElementById('clickedEnvironmentIframe').style.width;
-  var frameHeightNumber = parseInt(frameHeight.substr(0, 3)) - 4;
-  console.log(parseInt(frameHeight.substr(0, 3)));
-  console.log(frameHeightNumber);
-  document.getElementById('clickedEnvironmentIframe').style.height = frameHeightNumber+'vw';
-
-}
 
 var technoRow = document.getElementById('technoRow');
 var peopleRow = document.getElementById('peopleRow');
