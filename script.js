@@ -88,8 +88,6 @@ xhttp.onreadystatechange = function() {
     // });
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
       var getId = this.id;
-      // this.style.cursor = 'pointer';
-      // this.style.opacity = 0.7;
       console.log('closest id ',this.id);
       document.getElementById('technoCarouselInner').appendChild(playImage);
       var leftPosition = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2 ;
@@ -187,8 +185,6 @@ xhttp.onreadystatechange = function() {
     // });
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseenter',function(e){
       var getId = this.id;
-      // this.style.cursor = 'pointer';
-      // this.style.opacity = 0.7;
       console.log(this.id);
       console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
       document.getElementById('peopleCarouselInner').appendChild(playImage);
@@ -286,8 +282,6 @@ xhttp.onreadystatechange = function() {
     // });
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
       var getId = this.id;
-      // this.style.cursor = 'pointer';
-      // this.style.opacity = 0.7;
       console.log(this.id);
       console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
       document.getElementById('environmentCarouselInner').appendChild(playImage);
