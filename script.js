@@ -113,8 +113,8 @@ xhttp.onreadystatechange = function() {
         window.scrollTo(0,scrollPositionTechno-100);
 
         //other iframe src
-        document.getElementById('clickedPeopleIframe').setAttribute('src','');
-        document.getElementById('clickedEnvironmentIframe').setAttribute('src','');
+        document.getElementById('clickedPeopleIframe').setAttribute('src',null);
+        document.getElementById('clickedEnvironmentIframe').setAttribute('src',null);
 
         //display only clicked arrow of category
         document.getElementById('clickedfieldarrowPeople').style.display = 'none';
@@ -212,8 +212,8 @@ xhttp.onreadystatechange = function() {
         window.scrollTo(0,scrollPositionPeople-100);  
 
         //other iframe src
-        document.getElementById('clickedTechnoIframe').setAttribute('src','');
-        document.getElementById('clickedEnvironmentIframe').setAttribute('src','');          
+        document.getElementById('clickedTechnoIframe').setAttribute('src',null);
+        document.getElementById('clickedEnvironmentIframe').setAttribute('src',null);          
 
         //display only clicked arrow of category
         document.getElementById('clickedfieldarrowTechno').style.display = 'none';
@@ -310,8 +310,8 @@ xhttp.onreadystatechange = function() {
         window.scrollTo(0,scrollPositionEnvironment-100);      
 
         //other iframe src
-        document.getElementById('clickedPeopleIframe').setAttribute('src','');
-        document.getElementById('clickedTechnoIframe').setAttribute('src','');
+        document.getElementById('clickedPeopleIframe').setAttribute('src',null);
+        document.getElementById('clickedTechnoIframe').setAttribute('src',null);
 
         //display only clicked arrow of category
         document.getElementById('clickedfieldarrowTechno').style.display = 'none';
@@ -473,7 +473,7 @@ document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';
 // // document.getElementById('video3').style.border = '1px solid white';
 
 document.getElementById('closeModal').addEventListener('click',function(){
-  document.getElementById('modalBox').setAttribute('src','');
+  document.getElementById('modalBox').setAttribute('src',null);
 });
 
 var topvideocontainer = document.getElementById('topVideos');
