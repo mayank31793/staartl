@@ -88,12 +88,9 @@ xhttp.onreadystatechange = function() {
     // });
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
       var getId = this.id;
-      console.log('closest id ',this.id);
       document.getElementById('technoCarouselInner').appendChild(playImage);
       var leftPosition = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2 ;
-      console.log(leftPosition);
       playImage.style.left = leftPosition+'px';
-      console.log(typeof playImage.style.left);
       playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
 
       playImage.addEventListener('click',function(){
@@ -135,6 +132,12 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
         document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
         document.getElementById('clickedTechnoIframeDescription').style.fontFamily = 'fantasy';
+        
+        //black effect in iframe div on clicking thumbnail
+        setTimeout(function(){
+          // document.getElementsByClassName('toggleDiv')[0].style.opacity = 0;
+        },1000);
+
       });           
 
     });
@@ -185,8 +188,6 @@ xhttp.onreadystatechange = function() {
     // });
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseenter',function(e){
       var getId = this.id;
-      console.log(this.id);
-      console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
       document.getElementById('peopleCarouselInner').appendChild(playImage);
       playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
       playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
@@ -282,8 +283,6 @@ xhttp.onreadystatechange = function() {
     // });
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
       var getId = this.id;
-      console.log(this.id);
-      console.log(this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2);
       document.getElementById('environmentCarouselInner').appendChild(playImage);
       playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
       playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';

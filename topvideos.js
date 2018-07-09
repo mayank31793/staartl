@@ -8,6 +8,14 @@ document.getElementById('video1').addEventListener('click',function(){
   document.getElementById('clickedPeopleIframe').setAttribute('src','');
   document.getElementById('clickedEnvironmentIframe').setAttribute('src','');  
 
+  document.getElementById('clickedTechnoVid').style.display = 'none';
+  document.getElementById('clickedPeopleVid').style.display = 'none';
+  document.getElementById('clickedEnvironmentVid').style.display = 'none';
+
+  document.getElementById('clickedfieldarrowTechno').style.display = 'none';
+  document.getElementById('clickedfieldarrowPeople').style.display = 'none';
+  document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';  
+
 });
 
 document.getElementById('video2').addEventListener('click',function(){
