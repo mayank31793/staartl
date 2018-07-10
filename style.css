@@ -6,6 +6,10 @@ body{
 	background-color: #57595b;
 }
 
+#bodyContent{
+	/*max-width: 1400px;*/
+}
+
 #socialLink:hover,#ContactLink:hover{
 	cursor: pointer;
 }
@@ -207,7 +211,7 @@ ul {
 	padding-top: 75px;
 }
 
-@media screen and (max-width:767px){	
+@media screen and (max-width:767px){		
 
 	.environmentVideo,.peopleVideo,.technoVideo{
 		height: 70px;
@@ -233,3 +237,17 @@ ul {
 	}	
 
 }
+
+@media screen and (min-width:1441px){	
+
+	#bodyContent{
+		max-width: 1400px;
+		margin: 0px auto;
+	}
+
+	#topVideos{
+		max-height: 600px;
+		overflow-y: hidden;
+	}	
+
+}	
