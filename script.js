@@ -104,6 +104,8 @@ xhttp.onreadystatechange = function() {
         //delay in display iframe
         setTimeout(function(){
           document.getElementById('clickedTechnoIframe').style.opacity = 1;
+          document.getElementById('clickedPeopleIframe').style.opacity = 0;
+          document.getElementById('clickedEnvironmentIframe').style.opacity = 0;
           console.log('techno');
         },1000);
 
@@ -169,6 +171,8 @@ xhttp.onreadystatechange = function() {
         //delay in display iframe
         setTimeout(function(){
           document.getElementById('clickedPeopleIframe').style.opacity = 1;
+          document.getElementById('clickedTechnoIframe').style.opacity = 0;
+          document.getElementById('clickedEnvironmentIframe').style.opacity = 0;          
           console.log('people');
         },1000);
 
@@ -236,6 +240,8 @@ xhttp.onreadystatechange = function() {
         //delay in display iframe
         setTimeout(function(){
           document.getElementById('clickedEnvironmentIframe').style.opacity = 1;
+          document.getElementById('clickedPeopleIframe').style.opacity = 0;
+          document.getElementById('clickedTechnoIframe').style.opacity = 0;          
           console.log('environemnt');
         },1000);
 
