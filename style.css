@@ -7,7 +7,7 @@ body{
 }
 
 #bodyContent{
-	/*max-width: 1400px;*/
+	padding: 0px 10px;
 }
 
 #socialLink:hover,#ContactLink:hover{
@@ -91,6 +91,8 @@ body{
 	font-family: fantasy;
 	color: #fff;
 	text-shadow: 3px 1px 5px #000000;
+	margin-top: 40px;
+	margin-left: 15px;
 }
 
 #footer{

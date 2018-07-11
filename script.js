@@ -4,6 +4,10 @@ var playImage = document.createElement('img');
 playImage.setAttribute('src','./assets/staartlPlay.png');
 playImage.setAttribute('id','staartlPlay');
 
+document.getElementById('clickedTechnoIframe').style.opacity = 0;
+document.getElementById('clickedPeopleIframe').style.opacity = 0;
+document.getElementById('clickedEnvironmentIframe').style.opacity = 0;
+
 function categories(a,category,parentElement,field){
   if((a)%3 == 0){
 
@@ -37,7 +41,6 @@ function categories(a,category,parentElement,field){
 
   if(a==0){
     divCarousel.setAttribute('class','carousel-item active');  
-
   }
 
 }
@@ -50,42 +53,7 @@ xhttp.onreadystatechange = function() {
 
   for(var i=0;i<data[0].techno.length;i++){
     categories(i,data[0].techno[i].thumbnail,technoCarouselDiv,Object.keys(data[0])[0]); 
-    // document.getElementById(Object.keys(data[0])[0]+i).addEventListener('click',function(e){
-    //   var strget = e.target.id;
-    //   var strpos = strget.charAt(6);
-    //   var numstrpos = parseInt(strpos);
-
-    //   var arrowpositiontechno = this.offsetLeft + (this.offsetWidth)/2;
-
-    //   //display only clicked category
-    //   document.getElementById('clickedPeopleVid').style.display = 'none';
-    //   document.getElementById('clickedEnvironmentVid').style.display = 'none';      
-    //   document.getElementById('clickedTechnoVid').style.display = 'block';
-    //   var scrollPositionTechno = document.getElementById('clickedTechnoVid').offsetTop;
-    //   console.log(scrollPositionTechno);
-    //   window.scrollTo(0,scrollPositionTechno-100);
-
-    //   //other iframe src
-    //   document.getElementById('clickedPeopleIframe').setAttribute('src','');
-    //   document.getElementById('clickedEnvironmentIframe').setAttribute('src','');
-
-    //   //display only clicked arrow of category
-    //   document.getElementById('clickedfieldarrowPeople').style.display = 'none';
-    //   document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';      
-
-    //   //arrow pointing which field is open in description
-    //   document.getElementById('clickedfieldarrowTechno').style.display = 'block';
-    //   document.getElementById('clickedfieldarrowTechno').style.position = 'relative';
-    //   document.getElementById('clickedfieldarrowTechno').style.top = '-12px';
-    //   document.getElementById('clickedfieldarrowTechno').style.left = arrowpositiontechno+'px';
-
-    //   //toggle div details
-    //   document.getElementById('clickedTechnoVid').style.height = 'auto';
-    //   document.getElementById('clickedTechnoIframe').setAttribute('src',data[0].techno[numstrpos].link);
-    //   document.getElementById('clickedTechnoIframeHeading').innerHTML = data[0].techno[numstrpos].videotitle;
-    //   document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
-    //   document.getElementById('clickedTechnoIframeDescription').style.fontFamily = 'fantasy';
-    // });
+    
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
       var getId = this.id;
       document.getElementById('technoCarouselInner').appendChild(playImage);
@@ -133,9 +101,10 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedTechnoIframeDescription').innerHTML = data[0].techno[numstrpos].description;
         document.getElementById('clickedTechnoIframeDescription').style.fontFamily = 'fantasy';
         
-        //black effect in iframe div on clicking thumbnail
+        //delay in display iframe
         setTimeout(function(){
-          // document.getElementsByClassName('toggleDiv')[0].style.opacity = 0;
+          document.getElementById('clickedTechnoIframe').style.opacity = 1;
+          console.log('techno');
         },1000);
 
       });           
@@ -150,42 +119,7 @@ xhttp.onreadystatechange = function() {
 
   for(var j=0;j<data[0].people.length;j++){
     categories(j,data[0].people[j].thumbnail,peopleCarouselDiv,Object.keys(data[0])[1]);
-    // document.getElementById(Object.keys(data[0])[1]+j).addEventListener('click',function(e){
-    //   var strget = e.target.id;
-    //   var strpos = strget.charAt(6);
-    //   var numstrpos = parseInt(strpos);   
-
-    //   var arrowpositionpeople = this.offsetLeft + (this.offsetWidth)/2;
-
-    //   //display only clicked category
-    //   document.getElementById('clickedTechnoVid').style.display = 'none';
-    //   document.getElementById('clickedEnvironmentVid').style.display = 'none';         
-    //   document.getElementById('clickedPeopleVid').style.display = 'block';
-    //   var scrollPositionPeople = document.getElementById('clickedPeopleVid').offsetTop;
-    //   console.log(scrollPositionPeople);
-    //   window.scrollTo(0,scrollPositionPeople-100);  
-
-    //   //other iframe src
-    //   document.getElementById('clickedTechnoIframe').setAttribute('src','');
-    //   document.getElementById('clickedEnvironmentIframe').setAttribute('src','');          
-
-    //   //display only clicked arrow of category
-    //   document.getElementById('clickedfieldarrowTechno').style.display = 'none';
-    //   document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';
-
-    //   //arrow pointing which field is open in description
-    //   document.getElementById('clickedfieldarrowPeople').style.display = 'block';
-    //   document.getElementById('clickedfieldarrowPeople').style.position = 'relative';
-    //   document.getElementById('clickedfieldarrowPeople').style.top = '-12px';
-    //   document.getElementById('clickedfieldarrowPeople').style.left = arrowpositionpeople+'px';      
-
-    //   //toggle div details
-    //   document.getElementById('clickedPeopleVid').style.height = 'auto';
-    //   document.getElementById('clickedPeopleIframe').setAttribute('src',data[0].people[numstrpos].link);      
-    //   document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
-    //   document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
-    //   document.getElementById('clickedPeopleIframeDescription').style.fontFamily = 'fantasy';
-    // });
+    
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseenter',function(e){
       var getId = this.id;
       document.getElementById('peopleCarouselInner').appendChild(playImage);
@@ -231,6 +165,13 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedPeopleIframeHeading').innerHTML = data[0].people[numstrpos].videotitle;
         document.getElementById('clickedPeopleIframeDescription').innerHTML = data[0].people[numstrpos].description;
         document.getElementById('clickedPeopleIframeDescription').style.fontFamily = 'fantasy';
+      
+        //delay in display iframe
+        setTimeout(function(){
+          document.getElementById('clickedPeopleIframe').style.opacity = 1;
+          console.log('people');
+        },1000);
+
       }); 
 
     });
@@ -243,44 +184,7 @@ xhttp.onreadystatechange = function() {
 
   for(var k=0;k<data[0].environment.length;k++){
     categories(k,data[0].environment[k].thumbnail,environmentCarouselDiv,Object.keys(data[0])[2]);
-    // document.getElementById(Object.keys(data[0])[2]+k).addEventListener('click',function(e){
-    //   var strget = e.target.id;
-    //   var strpos = strget.charAt(11);
-    //   var numstrpos = parseInt(strpos); 
-
-    //   var arrowpositionenvironment = this.offsetLeft + (this.offsetWidth)/2;
-
-    //   //display only clicked category
-    //   document.getElementById('clickedTechnoVid').style.display = 'none';
-    //   document.getElementById('clickedPeopleVid').style.display = 'none';
-    //   document.getElementById('clickedEnvironmentVid').style.display = 'block';
-
-    //   //scroll
-    //   document.getElementById('clickedEnvironmentVid').style.scrollBehavior='smooth';
-    //   var scrollPositionEnvironment = document.getElementById('clickedEnvironmentVid').offsetTop;
-    //   console.log(scrollPositionEnvironment);
-    //   window.scrollTo(0,scrollPositionEnvironment-100);      
-
-    //   //other iframe src
-    //   document.getElementById('clickedPeopleIframe').setAttribute('src','');
-    //   document.getElementById('clickedTechnoIframe').setAttribute('src','');
-
-    //   //display only clicked arrow of category
-    //   document.getElementById('clickedfieldarrowTechno').style.display = 'none';
-    //   document.getElementById('clickedfieldarrowPeople').style.display = 'none';
-
-    //   //arrow pointing which field is open in description
-    //   document.getElementById('clickedfieldarrowEnvironment').style.display = 'block';
-    //   document.getElementById('clickedfieldarrowEnvironment').style.position = 'relative';
-    //   document.getElementById('clickedfieldarrowEnvironment').style.top = '-12px';
-    //   document.getElementById('clickedfieldarrowEnvironment').style.left = arrowpositionenvironment+'px';       
-
-    //   //toggle div details
-    //   document.getElementById('clickedEnvironmentIframe').setAttribute('src',data[0].environment[numstrpos].link);
-    //   document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
-    //   document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
-    //   document.getElementById('clickedEnvironmentIframeDescription').style.fontFamily = 'fantasy';
-    // });
+    
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
       var getId = this.id;
       document.getElementById('environmentCarouselInner').appendChild(playImage);
@@ -328,6 +232,13 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedEnvironmentIframeHeading').innerHTML = data[0].environment[numstrpos].videotitle;
         document.getElementById('clickedEnvironmentIframeDescription').innerHTML = data[0].environment[numstrpos].description;
         document.getElementById('clickedEnvironmentIframeDescription').style.fontFamily = 'fantasy';
+      
+        //delay in display iframe
+        setTimeout(function(){
+          document.getElementById('clickedEnvironmentIframe').style.opacity = 1;
+          console.log('environemnt');
+        },1000);
+
       }); 
 
     });
@@ -404,73 +315,6 @@ document.getElementById('clickedEnvironmentVid').style.display = 'none';
 document.getElementById('clickedfieldarrowTechno').style.display = 'none';
 document.getElementById('clickedfieldarrowPeople').style.display = 'none';
 document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';
-
-// document.getElementById('video1').addEventListener('click',function(){
-//   document.getElementById('modalBox').setAttribute('src',data[0].techno[1].link);
-//   document.getElementsByClassName('modal-title')[0].innerHTML = data[0].techno[1].videotitle;
-//   document.getElementById('modalBody').innerHTML = data[0].techno[1].description;
-
-//   //other iframe src null
-//   document.getElementById('clickedTechnoIframe').setAttribute('src','');
-//   document.getElementById('clickedPeopleIframe').setAttribute('src','');
-//   document.getElementById('clickedEnvironmentIframe').setAttribute('src','');  
-
-// });
-
-// document.getElementById('video2').addEventListener('click',function(){
-//   document.getElementById('modalBox').setAttribute('src',data[0].people[1].link);
-//   document.getElementsByClassName('modal-title')[0].innerHTML = data[0].people[1].videotitle;
-//   document.getElementById('modalBody').innerHTML = data[0].people[1].description;  
-// });
-
-// document.getElementById('video1').style.height = '90vh';
-// document.getElementById('video1').style.backgroundImage = (hashValue == "")?"url('./assets/english/mars.jpg')":"url('./assets/hindi/mars-web-hindi.jpg')";
-// document.getElementById('video1').style.backgroundRepeat = 'no-repeat';
-// document.getElementById('video1').style.backgroundSize = '100% auto';
-
-// //play button on hover for video1
-// document.getElementById('video1').addEventListener('mouseenter',function(){
-//   this.style.opacity = 0.8;
-//   this.appendChild(playImage);
-//   console.log(this.clientWidth);
-//   console.log(playImage.clientWidth);
-//   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
-//   playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';  
-// });
-
-// document.getElementById('video1').addEventListener('mouseleave',function(){
-//   this.removeChild(playImage);
-//   this.style.opacity = 1;
-// });
-
-// document.getElementById('video2').style.height = '90vh';
-// document.getElementById('video2').style.backgroundImage = (hashValue == "")?"url('./assets/english/afghan.jpg')":"url('./assets/hindi/afghan-web-hindi.jpg')";
-// document.getElementById('video2').style.backgroundRepeat = 'no-repeat';
-// document.getElementById('video2').style.backgroundSize = '130% auto';
-// document.getElementById('video2').style.backgroundPosition= 'center top';
-
-// //play button on hover for video2
-// document.getElementById('video2').addEventListener('mouseenter',function(){
-//   this.style.opacity = 0.8;
-//   this.appendChild(playImage);
-//   console.log(this.clientWidth);
-//   console.log(playImage.clientWidth);
-//   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
-//   playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';
-// });
-
-// document.getElementById('video2').addEventListener('mouseleave',function(){
-//   this.removeChild(playImage);
-//   this.style.opacity = 1;
-// });
-
-// document.getElementById('video1').style.overflowY = 'hidden';
-// document.getElementById('video2').style.overflowY = 'hidden';
-// // document.getElementById('video3').style.overflowY = 'hidden';
-
-// document.getElementById('video1').style.border = '1px solid white';
-// document.getElementById('video2').style.border = '1px solid white';
-// // document.getElementById('video3').style.border = '1px solid white';
 
 document.getElementById('closeModal').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src',null);
