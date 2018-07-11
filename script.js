@@ -12,7 +12,7 @@ function categories(a,category,parentElement,field){
   if((a)%3 == 0){
 
     divCarousel = document.createElement('div');
-    divCarousel.setAttribute('class','carousel-item');
+    divCarousel.setAttribute('class','carousel-item carouselHeight');
     // divCarousel.setAttribute('id','div'+a);      
 
     imgCarousel = document.createElement('img');
@@ -40,7 +40,7 @@ function categories(a,category,parentElement,field){
   }
 
   if(a==0){
-    divCarousel.setAttribute('class','carousel-item active');  
+    divCarousel.setAttribute('class','carousel-item active carouselHeight');  
   }
 
 }
@@ -308,12 +308,12 @@ document.getElementById('demo3').addEventListener('mouseleave',function(){
 });
 
 //carousel height
-document.getElementById('demo').style.height = '250px';
-document.getElementById('demo').style.overflowY = 'hidden';
-document.getElementById('demo2').style.height = '250px';
-document.getElementById('demo2').style.overflowY = 'hidden';
-document.getElementById('demo3').style.height = '250px';
-document.getElementById('demo3').style.overflowY = 'hidden';
+// document.getElementById('demo').style.height = '250px';
+// document.getElementById('demo').style.overflowY = 'hidden';
+// document.getElementById('demo2').style.height = '250px';
+// document.getElementById('demo2').style.overflowY = 'hidden';
+// document.getElementById('demo3').style.height = '250px';
+// document.getElementById('demo3').style.overflowY = 'hidden';
 
 document.getElementById('clickedTechnoVid').style.display = 'none';
 document.getElementById('clickedPeopleVid').style.display = 'none';

@@ -74,6 +74,10 @@ body{
 	overflow-y: hidden;*/
 }
 
+.carouselHeight{
+	height: 250px;
+}
+
 .environmentVideo,.peopleVideo,.technoVideo{
 	height: 220px;
 	/*border: 1px solid black;*/
@@ -236,6 +240,14 @@ ul {
 		display: none;
 		width: 30px;
 		padding-top: 0px;
+	}	
+
+	.carouselHeight{
+		height: 110px;
+	}
+
+	.categoryHeading{
+		margin-left: 0px;
 	}	
 
 }

@@ -3,9 +3,9 @@ if(window.innerWidth < 768){
   main.style.height = '45vh';
 	mini.style.height = '45vh';
 
-  document.getElementById('demo').style.height = '100px';
-  document.getElementById('demo2').style.height = '100px';
-  document.getElementById('demo3').style.height = '100px';
+  // document.getElementById('demo').style.height = '100px';
+  // document.getElementById('demo2').style.height = '100px';
+  // document.getElementById('demo3').style.height = '100px';
 
   //techno iframe height in mobile
   document.getElementById('clickedTechnoIframe').style.width = '100vw';
