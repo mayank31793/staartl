@@ -100,9 +100,9 @@ body{
 }
 
 .categoryHeading{
-	font-family: fantasy;
+	font-family: Helvetica;
 	color: #fff;
-	text-shadow: 3px 1px 5px #000000;
+	/*text-shadow: 3px 1px 5px #000000;*/
 	margin-top: 40px;
 	margin-left: 15px;
 }
@@ -210,6 +210,7 @@ ul {
 }
 
 #lang{
+	background-color: #C1A807;
 	position: fixed;
 	bottom: 5px;
 	right: 5px;

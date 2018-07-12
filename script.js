@@ -59,12 +59,13 @@ xhttp.onreadystatechange = function() {
       document.getElementById('technoCarouselInner').appendChild(playImage);
       var leftPosition = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2 ;
       playImage.style.left = leftPosition+'px';
-      playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
+      playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';       
 
       playImage.addEventListener('click',function(){
         this.style.cursor = 'pointer';
         var hovergetId = document.querySelector('#'+getId).getAttribute('id');
         console.log(hovergetId);
+
 
         var strget = hovergetId;
         var strpos = strget.charAt(6);
@@ -115,6 +116,7 @@ xhttp.onreadystatechange = function() {
 
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseleave',function(e){
       this.style.opacity = 1;
+
     });
 
   }  
