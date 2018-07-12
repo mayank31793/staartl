@@ -24,7 +24,7 @@ document.getElementById('video2').addEventListener('click',function(){
   document.getElementById('modalBody').innerHTML = data[0].people[1].description;  
 });
 
-document.getElementById('video1').style.height = '90vh';
+// document.getElementById('video1').style.height = '90vh';
 document.getElementById('video1').style.backgroundImage = (hashValue == "")?"url('./assets/english/mars.jpg')":"url('./assets/hindi/mars-web-hindi.jpg')";
 document.getElementById('video1').style.backgroundRepeat = 'no-repeat';
 document.getElementById('video1').style.backgroundSize = '100% auto';
@@ -44,7 +44,7 @@ document.getElementById('video1').addEventListener('mouseleave',function(){
   this.style.opacity = 1;
 });
 
-document.getElementById('video2').style.height = '90vh';
+// document.getElementById('video2').style.height = '90vh';
 document.getElementById('video2').style.backgroundImage = (hashValue == "")?"url('./assets/english/afghan.jpg')":"url('./assets/hindi/afghan-web-hindi.jpg')";
 document.getElementById('video2').style.backgroundRepeat = 'no-repeat';
 document.getElementById('video2').style.backgroundSize = '133% auto';
@@ -79,4 +79,8 @@ document.getElementById('video2').style.borderStyle = 'solid';
 if(window.innerWidth >1440){
   document.getElementById('video1').style.height = '600px';
   document.getElementById('video2').style.height = '600px';  
+}
+else{
+  document.getElementById('video1').style.height = '90vh';
+  document.getElementById('video2').style.height = '90vh';  
 }
