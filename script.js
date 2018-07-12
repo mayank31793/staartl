@@ -7,6 +7,7 @@ playImage.setAttribute('id','staartlPlay');
 document.getElementById('clickedTechnoIframe').style.opacity = 0;
 document.getElementById('clickedPeopleIframe').style.opacity = 0;
 document.getElementById('clickedEnvironmentIframe').style.opacity = 0;
+document.getElementById('modalBox').style.opacity = 0;
 
 function categories(a,category,parentElement,field){
   if((a)%3 == 0){

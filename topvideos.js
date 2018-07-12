@@ -16,12 +16,38 @@ document.getElementById('video1').addEventListener('click',function(){
   document.getElementById('clickedfieldarrowPeople').style.display = 'none';
   document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';  
 
+  //delay in display iframe
+  setTimeout(function(){
+    document.getElementById('modalBox').style.opacity = 1;
+    console.log('modal');
+  },1000);
+
 });
 
 document.getElementById('video2').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src',data[0].people[1].link);
   document.getElementsByClassName('modal-title')[0].innerHTML = data[0].people[1].videotitle;
-  document.getElementById('modalBody').innerHTML = data[0].people[1].description;  
+  document.getElementById('modalBody').innerHTML = data[0].people[1].description; 
+
+  //other iframe src null
+  document.getElementById('clickedTechnoIframe').setAttribute('src','');
+  document.getElementById('clickedPeopleIframe').setAttribute('src','');
+  document.getElementById('clickedEnvironmentIframe').setAttribute('src','');  
+
+  document.getElementById('clickedTechnoVid').style.display = 'none';
+  document.getElementById('clickedPeopleVid').style.display = 'none';
+  document.getElementById('clickedEnvironmentVid').style.display = 'none';
+
+  document.getElementById('clickedfieldarrowTechno').style.display = 'none';
+  document.getElementById('clickedfieldarrowPeople').style.display = 'none';
+  document.getElementById('clickedfieldarrowEnvironment').style.display = 'none'; 
+
+  //delay in display iframe
+  setTimeout(function(){
+    document.getElementById('modalBox').style.opacity = 1;
+    console.log('modal');
+  },1000);  
+
 });
 
 // document.getElementById('video1').style.height = '90vh';
