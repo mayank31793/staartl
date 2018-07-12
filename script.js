@@ -327,6 +327,7 @@ document.getElementById('clickedfieldarrowEnvironment').style.display = 'none';
 
 document.getElementById('closeModal').addEventListener('click',function(){
   document.getElementById('modalBox').setAttribute('src',null);
+  document.getElementById('modalBox').style.opacity = 0;
 });
 
 var topvideocontainer = document.getElementById('topVideos');
