@@ -31,4 +31,12 @@ if(window.innerWidth < 768){
   console.log(frameHeightNumber);
   document.getElementById('clickedEnvironmentIframe').style.height = frameHeightNumber+'vw';
 
+  //topvideo border for mobile devices
+  document.getElementById('video1').style.borderWidth = '5px 5px 5px 5px';
+  document.getElementById('video1').style.borderColor = 'white';
+  document.getElementById('video1').style.borderStyle = 'solid';
+  document.getElementById('video2').style.borderWidth = '5px 5px 5px 5px';
+  document.getElementById('video2').style.borderColor = 'white';
+  document.getElementById('video2').style.borderStyle = 'solid';  
+
 }

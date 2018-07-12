@@ -67,8 +67,11 @@ document.getElementById('video2').addEventListener('mouseleave',function(){
 
 document.getElementById('video1').style.overflowY = 'hidden';
 document.getElementById('video2').style.overflowY = 'hidden';
-// document.getElementById('video3').style.overflowY = 'hidden';
 
-document.getElementById('video1').style.border = '1px solid white';
-document.getElementById('video2').style.border = '1px solid white';
-// document.getElementById('video3').style.border = '1px solid white';
+//topvideo border for desktop devices
+document.getElementById('video1').style.borderWidth = '10px 5px 10px 10px';
+document.getElementById('video1').style.borderColor = 'white';
+document.getElementById('video1').style.borderStyle = 'solid';
+document.getElementById('video2').style.borderWidth = '10px 10px 10px 5px';
+document.getElementById('video2').style.borderColor = 'white';
+document.getElementById('video2').style.borderStyle = 'solid';

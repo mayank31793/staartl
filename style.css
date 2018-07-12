@@ -3,7 +3,11 @@
 }
 
 body{
-	background-color: #57595b;
+	background-color: #186b98;
+}
+
+#header{
+	background-color: #0b537a;
 }
 
 #bodyContent{
@@ -101,9 +105,10 @@ body{
 
 #footer{
 	/*height: 100px;*/
-	background-color: #2d2e2f;
+	background-color: #044061;
 	margin-top: 20px;
 	padding-top: 8px;
+	padding-bottom: 10px;
 }
 
 b{
