@@ -30,32 +30,32 @@ document.getElementById('clickedEnvironmentIframecloseMobile').addEventListener(
 
 //close Iframe while going back and forth
 document.getElementsByClassName('signs')[0].addEventListener('click',function(){
-	closeIframe('clickedfieldarrowTechno','clickedTechnoVid','clickedTechnoIframe');
+	// closeIframe('clickedfieldarrowTechno','clickedTechnoVid','clickedTechnoIframe');
   document.getElementById('staartlPlay').remove();
 });
 
 document.getElementsByClassName('signs')[1].addEventListener('click',function(){
-	closeIframe('clickedfieldarrowTechno','clickedTechnoVid','clickedTechnoIframe');
+	// closeIframe('clickedfieldarrowTechno','clickedTechnoVid','clickedTechnoIframe');
   document.getElementById('staartlPlay').remove();
 });
 
 document.getElementsByClassName('signs2')[0].addEventListener('click',function(){
-	closeIframe('clickedfieldarrowPeople','clickedPeopleVid','clickedPeopleIframe');
+	// closeIframe('clickedfieldarrowPeople','clickedPeopleVid','clickedPeopleIframe');
   document.getElementById('staartlPlay').remove();
 });
 
 document.getElementsByClassName('signs2')[1].addEventListener('click',function(){
-	closeIframe('clickedfieldarrowPeople','clickedPeopleVid','clickedPeopleIframe');
+	// closeIframe('clickedfieldarrowPeople','clickedPeopleVid','clickedPeopleIframe');
   document.getElementById('staartlPlay').remove();
 });
 
 document.getElementsByClassName('signs3')[0].addEventListener('click',function(){
-	closeIframe('clickedfieldarrowEnvironment','clickedEnvironmentVid','clickedEnvironmentIframe');
+	// closeIframe('clickedfieldarrowEnvironment','clickedEnvironmentVid','clickedEnvironmentIframe');
   document.getElementById('staartlPlay').remove();
 });
 
 document.getElementsByClassName('signs3')[1].addEventListener('click',function(){
-	closeIframe('clickedfieldarrowEnvironment','clickedEnvironmentVid','clickedEnvironmentIframe');
+	// closeIframe('clickedfieldarrowEnvironment','clickedEnvironmentVid','clickedEnvironmentIframe');
   document.getElementById('staartlPlay').remove();
 });
 
