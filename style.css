@@ -10,8 +10,12 @@ body{
 	background-color: #0b537a;
 }
 
+.videosTopContainer{
+	padding: 0px 15px;
+}
+
 #bodyContent{
-	padding: 0px 10px;
+	
 }
 
 #socialLink:hover,#ContactLink:hover{
@@ -270,7 +274,7 @@ ul {
 	}
 
 	#topVideos{
-		max-height: 600px;
+		/*max-height: 600px;*/
 		overflow-y: hidden;
 	}	
 

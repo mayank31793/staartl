@@ -47,7 +47,7 @@ document.getElementById('video1').addEventListener('mouseleave',function(){
 document.getElementById('video2').style.height = '90vh';
 document.getElementById('video2').style.backgroundImage = (hashValue == "")?"url('./assets/english/afghan.jpg')":"url('./assets/hindi/afghan-web-hindi.jpg')";
 document.getElementById('video2').style.backgroundRepeat = 'no-repeat';
-document.getElementById('video2').style.backgroundSize = '130% auto';
+document.getElementById('video2').style.backgroundSize = '133% auto';
 document.getElementById('video2').style.backgroundPosition= 'center top';
 
 //play button on hover for video2
@@ -75,3 +75,8 @@ document.getElementById('video1').style.borderStyle = 'solid';
 document.getElementById('video2').style.borderWidth = '10px 10px 10px 5px';
 document.getElementById('video2').style.borderColor = 'white';
 document.getElementById('video2').style.borderStyle = 'solid';
+
+if(window.innerWidth >1440){
+  document.getElementById('video1').style.height = '600px';
+  document.getElementById('video2').style.height = '600px';  
+}
