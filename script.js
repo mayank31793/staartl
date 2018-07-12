@@ -332,11 +332,6 @@ var topvideocontainer = document.getElementById('topVideos');
 var main = document.getElementsByClassName('big')[0];
 var mini = document.getElementsByClassName('mini')[0];
 
-// topvideocontainer.style.height = '90vh';
-
-// main.style.height = '90vh';
-// mini.style.height = '90vh';
-
 var technoRow = document.getElementById('technoRow');
 var peopleRow = document.getElementById('peopleRow');
 var environmentRow = document.getElementById('environmentRow');
