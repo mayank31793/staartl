@@ -18,6 +18,10 @@ body{
 	cursor: pointer;
 }
 
+#socialLink,#ContactLink{
+	color:#ffffff;
+}
+
 #staartlPlay{
 	z-index: 100;
 	width: 100px;
