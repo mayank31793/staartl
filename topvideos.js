@@ -106,7 +106,15 @@ if(window.innerWidth >1440){
   document.getElementById('video1').style.height = '600px';
   document.getElementById('video2').style.height = '600px';  
 }
+
+else if(window.innerWidth<window.innerHeight){
+  document.getElementById('video1').style.height = '330px';
+  document.getElementById('video2').style.height = '330px'; 
+  console.log('we are here');
+}
+
 else{
   document.getElementById('video1').style.height = '90vh';
   document.getElementById('video2').style.height = '90vh';  
 }
+
