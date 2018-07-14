@@ -57,6 +57,8 @@ xhttp.onreadystatechange = function() {
     
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseenter',function(e){
       var getId = this.id;
+      this.style.transform = 'scale(1.1)';
+      this.style.transition = '0.7s';
       document.getElementById('technoCarouselInner').appendChild(playImage);
       var leftPosition = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2 ;
       playImage.style.left = leftPosition+'px';
@@ -117,7 +119,7 @@ xhttp.onreadystatechange = function() {
 
     document.getElementById(Object.keys(data[0])[0]+i).addEventListener('mouseleave',function(e){
       this.style.opacity = 1;
-
+      this.style.transform = 'scale(1)';
     });
 
   }  
@@ -127,6 +129,8 @@ xhttp.onreadystatechange = function() {
     
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseenter',function(e){
       var getId = this.id;
+      this.style.transform = 'scale(1.1)';
+      this.style.transition = '0.7s';      
       document.getElementById('peopleCarouselInner').appendChild(playImage);
       playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
       playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
@@ -185,6 +189,7 @@ xhttp.onreadystatechange = function() {
 
     document.getElementById(Object.keys(data[0])[1]+j).addEventListener('mouseleave',function(e){
       this.style.opacity = 1;
+      this.style.transform = 'scale(1)';
     });
 
   }
@@ -194,6 +199,8 @@ xhttp.onreadystatechange = function() {
     
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseenter',function(e){
       var getId = this.id;
+      this.style.transform = 'scale(1.1)';
+      this.style.transition = '0.7s';
       document.getElementById('environmentCarouselInner').appendChild(playImage);
       playImage.style.left = this.offsetLeft + (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
       playImage.style.top = document.getElementById('demo3').clientHeight/2 - (playImage.clientHeight)/2+'px';
@@ -254,6 +261,7 @@ xhttp.onreadystatechange = function() {
 
     document.getElementById(Object.keys(data[0])[2]+k).addEventListener('mouseleave',function(e){
       this.style.opacity = 1;
+      this.style.transform = 'scale(1)';      
     });
 
   }    
