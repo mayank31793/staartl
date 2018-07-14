@@ -249,16 +249,16 @@ ul {
 
 	.leftArrowImg,.rightArrowImg{
 	    height: 110px;
-	    width: 38px;
+	    width: 30px;
 	    margin-top: 0px;	
 	}
 
 	.leftArrowImg{
-	    margin-left: -140px;
+	    margin-left: 0px;
 	}
 
 	.rightArrowImg{
-	    margin-right: -140px;
+	    margin-right: 0px;
 	}	
 
 	.environmentVideo,.peopleVideo,.technoVideo{
@@ -280,8 +280,8 @@ ul {
 
 	.signs,.signs2,.signs3{
 		display: none;
-		/*width: 30px;
-		padding-top: 0px;*/
+		width: 33px;
+		margin: 0px;
 	}	
 
 	.carouselHeight{
