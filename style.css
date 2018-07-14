@@ -72,6 +72,20 @@ body{
 	padding-right: 0px !important;
 }
 
+.leftArrowImg,.rightArrowImg{
+    height: 150px;
+    width: 75px;
+    margin-top: 50px;	
+}
+
+.leftArrowImg{
+    margin-left: -100px;
+}
+
+.rightArrowImg{
+    margin-right: -100px;
+}
+
 #topVideos{
 	margin-top: 57px;
 	margin-bottom: 25px;
@@ -227,11 +241,25 @@ ul {
 
 .signs,.signs2,.signs3{
 	display: none;
-	width: 30px;
-	padding-top: 75px;
+	width: 60px;
+	margin: 0px 60px;
 }
 
-@media screen and (max-width:767px){		
+@media screen and (max-width:767px){	
+
+	.leftArrowImg,.rightArrowImg{
+	    height: 110px;
+	    width: 38px;
+	    margin-top: 0px;	
+	}
+
+	.leftArrowImg{
+	    margin-left: -140px;
+	}
+
+	.rightArrowImg{
+	    margin-right: -140px;
+	}	
 
 	.environmentVideo,.peopleVideo,.technoVideo{
 		height: 70px;
@@ -252,8 +280,8 @@ ul {
 
 	.signs,.signs2,.signs3{
 		display: none;
-		width: 30px;
-		padding-top: 0px;
+		/*width: 30px;
+		padding-top: 0px;*/
 	}	
 
 	.carouselHeight{

@@ -310,14 +310,6 @@ document.getElementById('demo3').addEventListener('mouseleave',function(){
   document.getElementById('staartlPlay').remove();
 });
 
-//carousel height
-// document.getElementById('demo').style.height = '250px';
-// document.getElementById('demo').style.overflowY = 'hidden';
-// document.getElementById('demo2').style.height = '250px';
-// document.getElementById('demo2').style.overflowY = 'hidden';
-// document.getElementById('demo3').style.height = '250px';
-// document.getElementById('demo3').style.overflowY = 'hidden';
-
 document.getElementById('clickedTechnoVid').style.display = 'none';
 document.getElementById('clickedPeopleVid').style.display = 'none';
 document.getElementById('clickedEnvironmentVid').style.display = 'none';
