@@ -16,5 +16,8 @@ window.onload = function(){
     document.getElementById('lang').innerHTML = 'हिंदी';
     document.getElementById('video1').style.backgroundImage = "url('./assets/hindi/mars-web-hindi.jpg')";    
     document.getElementById('video2').style.backgroundImage = "url('./assets/hindi/afghan-web-hindi.jpg')";
+    document.getElementById('idTechno').innerHTML = 'तकनीकी';
+    document.getElementById('idPeople').innerHTML = 'लोग';
+    document.getElementById('idEnvironment').innerHTML = 'वातावरण';
   }
 }
