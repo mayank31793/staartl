@@ -69,6 +69,7 @@ document.getElementById('video1').addEventListener('mouseenter',function(){
   videoText1Div.style.position = 'absolute';
   videoText1Div.style.bottom = '0px';
   videoText1Div.style.padding = '5px';
+  videoText1Div.style.fontSize = '20px';
 
   this.appendChild(playImage);
   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
@@ -98,7 +99,8 @@ document.getElementById('video2').addEventListener('mouseenter',function(){
   videoText2Div.style.color = 'white';
   videoText2Div.style.position = 'absolute';
   videoText2Div.style.bottom = '0px';
-  videoText2Div.style.padding = '5px';  
+  videoText2Div.style.padding = '5px';
+  videoText2Div.style.fontSize = '20px';  
 
   this.appendChild(playImage);
   console.log(this.clientWidth);
