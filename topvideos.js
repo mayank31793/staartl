@@ -55,18 +55,29 @@ document.getElementById('video1').style.backgroundImage = (hashValue == "")?"url
 document.getElementById('video1').style.backgroundRepeat = 'no-repeat';
 document.getElementById('video1').style.backgroundSize = '100% auto';
 
+var videoText1Div = document.createElement('div');
+var videoText2Div = document.createElement('div');
+
 //play button on hover for video1
 document.getElementById('video1').addEventListener('mouseenter',function(){
   this.style.opacity = 0.8;
+
+  //description on hover
+  videoText1Div.innerHTML = data[0].techno[1].description;
+  this.appendChild(videoText1Div);
+  videoText1Div.style.color = 'white';
+  videoText1Div.style.position = 'absolute';
+  videoText1Div.style.bottom = '0px';
+  videoText1Div.style.padding = '5px';
+
   this.appendChild(playImage);
-  console.log(this.clientWidth);
-  console.log(playImage.clientWidth);
   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
   playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';  
 });
 
 document.getElementById('video1').addEventListener('mouseleave',function(){
   this.removeChild(playImage);
+  this.removeChild(videoText1Div);
   this.style.opacity = 1;
 });
 
@@ -79,6 +90,16 @@ document.getElementById('video2').style.backgroundPosition= 'center top';
 //play button on hover for video2
 document.getElementById('video2').addEventListener('mouseenter',function(){
   this.style.opacity = 0.8;
+
+  //description on hover
+  videoText2Div.innerHTML = data[0].people[1].description;
+  this.appendChild(videoText2Div);
+  videoText2Div.style.color = 'white';
+  videoText2Div.style.color = 'white';
+  videoText2Div.style.position = 'absolute';
+  videoText2Div.style.bottom = '0px';
+  videoText2Div.style.padding = '5px';  
+
   this.appendChild(playImage);
   console.log(this.clientWidth);
   console.log(playImage.clientWidth);
@@ -88,6 +109,7 @@ document.getElementById('video2').addEventListener('mouseenter',function(){
 
 document.getElementById('video2').addEventListener('mouseleave',function(){
   this.removeChild(playImage);
+  this.removeChild(videoText2Div);
   this.style.opacity = 1;
 });
 
