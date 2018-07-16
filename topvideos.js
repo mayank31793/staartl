@@ -60,7 +60,7 @@ var videoText2Div = document.createElement('div');
 
 //play button on hover for video1
 document.getElementById('video1').addEventListener('mouseenter',function(){
-  this.style.opacity = 0.8;
+  // this.style.opacity = 0.8;
 
   //description on hover
   videoText1Div.innerHTML = data[0].techno[1].description;
@@ -69,7 +69,8 @@ document.getElementById('video1').addEventListener('mouseenter',function(){
   videoText1Div.style.position = 'absolute';
   videoText1Div.style.bottom = '0px';
   videoText1Div.style.padding = '5px';
-  videoText1Div.style.fontSize = '20px';
+  videoText1Div.style.fontSize = '30px';
+  videoText1Div.style.backgroundColor = 'rgba(7, 0, 0, 0.5)';
 
   this.appendChild(playImage);
   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
@@ -90,17 +91,17 @@ document.getElementById('video2').style.backgroundPosition= 'center top';
 
 //play button on hover for video2
 document.getElementById('video2').addEventListener('mouseenter',function(){
-  this.style.opacity = 0.8;
+  // this.style.opacity = 0.8;
 
   //description on hover
   videoText2Div.innerHTML = data[0].people[1].description;
   this.appendChild(videoText2Div);
   videoText2Div.style.color = 'white';
-  videoText2Div.style.color = 'white';
   videoText2Div.style.position = 'absolute';
   videoText2Div.style.bottom = '0px';
-  videoText2Div.style.padding = '5px';
-  videoText2Div.style.fontSize = '20px';  
+  videoText2Div.style.padding = '5px'; 
+  videoText2Div.style.fontSize = '30px';
+  videoText2Div.style.backgroundColor = 'rgba(7, 0, 0, 0.5)';   
 
   this.appendChild(playImage);
   console.log(this.clientWidth);
