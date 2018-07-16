@@ -1,7 +1,7 @@
 function closeIframe(arrow,opened,iframesrc){
   document.getElementById(arrow).style.display = 'none';
   document.getElementById(opened).style.display = 'none';
-  document.getElementById(iframesrc).setAttribute('src','');  
+  document.getElementById(iframesrc).setAttribute('src',null);  
 }
 
 document.getElementById('clickedTechnoIframeclose').addEventListener('click',function(){

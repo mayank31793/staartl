@@ -80,9 +80,10 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedPeopleVid').style.display = 'none';
         document.getElementById('clickedEnvironmentVid').style.display = 'none';      
         document.getElementById('clickedTechnoVid').style.display = 'block';
+        document.getElementById('clickedTechnoVid').className = 'animationDiv';
         var scrollPositionTechno = document.getElementById('clickedTechnoVid').offsetTop;
         console.log(scrollPositionTechno);
-        window.scrollTo(0,scrollPositionTechno-100);
+        window.scrollTo(0,scrollPositionTechno-100);       
 
         //other iframe src
         document.getElementById('clickedPeopleIframe').setAttribute('src',null);

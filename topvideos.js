@@ -104,8 +104,6 @@ document.getElementById('video2').addEventListener('mouseenter',function(){
   videoText2Div.style.backgroundColor = 'rgba(7, 0, 0, 0.5)';   
 
   this.appendChild(playImage);
-  console.log(this.clientWidth);
-  console.log(playImage.clientWidth);
   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
   playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';
 });
