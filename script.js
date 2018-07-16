@@ -151,6 +151,7 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedTechnoVid').style.display = 'none';
         document.getElementById('clickedEnvironmentVid').style.display = 'none';         
         document.getElementById('clickedPeopleVid').style.display = 'block';
+        document.getElementById('clickedPeopleVid').className = 'animationDiv';
         var scrollPositionPeople = document.getElementById('clickedPeopleVid').offsetTop;
         console.log(scrollPositionPeople);
         window.scrollTo(0,scrollPositionPeople-100);  
@@ -221,7 +222,7 @@ xhttp.onreadystatechange = function() {
         document.getElementById('clickedTechnoVid').style.display = 'none';
         document.getElementById('clickedPeopleVid').style.display = 'none';
         document.getElementById('clickedEnvironmentVid').style.display = 'block';
-
+        document.getElementById('clickedEnvironmentVid').className = 'animationDiv';
         //scroll
         document.getElementById('clickedEnvironmentVid').style.scrollBehavior='smooth';
         var scrollPositionEnvironment = document.getElementById('clickedEnvironmentVid').offsetTop;
