@@ -6,11 +6,17 @@ window.onload = function(){
     document.getElementById('lang').innerHTML = 'English';
     document.getElementById('video1').style.backgroundImage = "url('./assets/english/mars.jpg')";
     document.getElementById('video2').style.backgroundImage = "url('./assets/english/afghan.jpg')";
+    document.getElementById('idTechno').innerHTML = 'Techno';
+    document.getElementById('idPeople').innerHTML = 'People';
+    document.getElementById('idEnvironment').innerHTML = 'Environment';     
   }
   else if(hashValue == "#english"){
     document.getElementById('lang').innerHTML = 'English';
     document.getElementById('video1').style.backgroundImage = "url('./assets/english/mars.jpg')";  
     document.getElementById('video2').style.backgroundImage = "url('./assets/english/afghan.jpg')";  
+    document.getElementById('idTechno').innerHTML = 'Techno';
+    document.getElementById('idPeople').innerHTML = 'People';
+    document.getElementById('idEnvironment').innerHTML = 'Environment';    
   }
   else{
     document.getElementById('lang').innerHTML = 'हिंदी';
