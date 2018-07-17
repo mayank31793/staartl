@@ -1,7 +1,9 @@
 function closeIframe(arrow,opened,iframesrc){
   document.getElementById(arrow).style.display = 'none';
-  document.getElementById(opened).style.display = 'none';
-  // document.getElementById(opened).className = 'animationDivClose';
+  document.getElementById(opened).className = 'animationDivClose';
+  setTimeout(function(){
+    document.getElementById(opened).style.display = 'none';
+  },500);
   document.getElementById(iframesrc).setAttribute('src',null);  
 }
 
