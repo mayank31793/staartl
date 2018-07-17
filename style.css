@@ -181,6 +181,17 @@ ul {
     to {opacity: 1;transform: scaleY(1);transform-origin:top;}
 }
 
+.animationDivClose{
+    animation-name: toggledivclose;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+}
+
+@keyframes toggledivclose {
+    from {display: block;}
+    to {display: none;}
+}
+
 #clickedTechnoVid,#clickedPeopleVid,#clickedEnvironmentVid{
 	color: #ffffff;
 }
