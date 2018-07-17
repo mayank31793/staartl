@@ -72,6 +72,10 @@ document.getElementById('video1').addEventListener('mouseenter',function(){
   videoText1Div.style.fontSize = '30px';
   videoText1Div.style.backgroundColor = 'rgba(7, 0, 0, 0.5)';
 
+  if(window.innerWidth<768){
+    videoText1Div.style.fontSize = '25px';
+  }
+
   this.appendChild(playImage);
   playImage.style.left = (this.clientWidth)/2 - (playImage.clientWidth)/2+'px';
   playImage.style.top = (this.clientHeight)/2 - (playImage.clientHeight)/2+'px';  
